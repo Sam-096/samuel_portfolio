@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
-import { Github, Linkedin, Download, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, Download, ArrowDown, Code2, Database, Zap } from 'lucide-react';
 import gsap from 'gsap';
 
 export const Hero = () => {
-
   useEffect(() => {
     // Animate hero text on mount
     setTimeout(() => {
@@ -90,10 +89,18 @@ export const Hero = () => {
 
   return (
     <section className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 flex items-center justify-center px-4 py-20 relative overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+      {/* Floating skill badges */}
+      <div className="absolute top-32 left-4 md:left-10 glass px-4 py-2 rounded-lg text-sm md:text-base flex items-center gap-2 animate-bounce" style={{ animationDelay: '0s' }}>
+        <Code2 className="w-4 h-4 md:w-5 md:h-5 text-teal-400" />
+        <span className="text-slate-300">React & Node.js</span>
+      </div>
+      <div className="absolute top-40 right-4 md:right-10 glass px-4 py-2 rounded-lg text-sm md:text-base flex items-center gap-2 animate-bounce" style={{ animationDelay: '0.5s' }}>
+        <Database className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
+        <span className="text-slate-300">PostgreSQL</span>
+      </div>
+      <div className="absolute bottom-32 left-4 md:left-10 glass px-4 py-2 rounded-lg text-sm md:text-base flex items-center gap-2 animate-bounce" style={{ animationDelay: '1s' }}>
+        <Zap className="w-4 h-4 md:w-5 md:h-5 text-yellow-400" />
+        <span className="text-slate-300">AI Integration</span>
       </div>
 
       <div className="max-w-4xl mx-auto text-center z-10">

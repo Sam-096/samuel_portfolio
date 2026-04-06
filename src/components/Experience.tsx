@@ -46,7 +46,7 @@ export const Experience = () => {
                 className="experience-card"
               >
                 <div
-                  className={`flex gap-8 items-start ${
+                  className={`flex gap-8 md:gap-12 items-start ${
                     index % 2 === 0 ? 'flex-row' : 'flex-row-reverse md:flex-row'
                   }`}
                 >

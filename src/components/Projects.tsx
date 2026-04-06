@@ -62,21 +62,21 @@ export const Projects = () => {
                   </ul>
                 )}
 
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.stack.slice(0, 3).map((tech, i) => (
-                    <span
-                      key={i}
-                      className="text-xs px-2 py-1 bg-teal-500/20 text-teal-300 border border-teal-500/50 rounded-md"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                  {project.stack.length > 3 && (
-                    <span className="text-xs px-2 py-1 text-slate-400">
-                      +{project.stack.length - 3} more
-                    </span>
-                  )}
+                {/* Tech Stack - More prominent */}
+                <div className="mb-6">
+                  <p className="text-xs font-semibold text-teal-300 mb-3 uppercase tracking-wider">
+                    Tech Stack
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.stack.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="text-xs px-3 py-1 bg-gradient-to-r from-teal-500/30 to-blue-500/30 text-teal-200 border border-teal-500/50 rounded-full font-medium hover:border-teal-400 transition-colors"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Action Buttons */}

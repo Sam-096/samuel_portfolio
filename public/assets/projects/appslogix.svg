@@ -1,0 +1,12 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#grad4)"/>
+  <text x="960" y="500" font-size="48" fill="white" text-anchor="middle" font-family="sans-serif">AppLogix</text>
+  <text x="960" y="580" font-size="32" fill="#fee2e2" text-anchor="middle" font-family="sans-serif">Air Shipping & Logistics Platform</text>
+  <text x="960" y="900" font-size="24" fill="#fecaca" text-anchor="middle" font-family="sans-serif">📷 Replace with screenshot from appslogix.netlify.app</text>
+</svg>

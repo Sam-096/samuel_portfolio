@@ -1,0 +1,76 @@
+Kottala Samuel - Resume
+
+CONTACT INFORMATION
+Email: kottala.samuel@gmail.com
+GitHub: github.com/Sam-096
+LinkedIn: linkedin.com/in/kottala-samuel
+Location: India
+
+PROFESSIONAL SUMMARY
+Results-driven Developer (2+ YOE) delivering SaaS platforms via React, Angular & Node.js. Bridges software engineering with data analytics (SQL/BI) and AI automation to build intelligent, workflow-driven enterprise dashboards.
+
+PROFESSIONAL EXPERIENCE
+
+ALX Solutions | Data-Focused Full Stack Developer
+November 2024 - Present
+• Engineered real-time SQL-to-LLM data injection pipelines
+• Designed and optimized PostgreSQL warehouse databases
+• Developed GST financial dashboards with real-time KPI tracking
+• Technologies: PostgreSQL, Node.js, React, Python, Claude API
+
+JOJO Techland | Application Developer
+November 2023 - November 2024
+• Built multi-domain SaaS admin dashboards for job portals and e-commerce
+• Designed and implemented REST APIs for data management
+• Created complex data grids with filtering, sorting, and pagination
+• Technologies: Angular 16+, TypeScript, REST APIs, Tailwind CSS
+
+Smart Bridge | Data Analyst Intern
+February 2023 - July 2023
+• Created interactive dashboards in Tableau and Google Sheets
+• Wrote complex SQL queries for data aggregation and analysis
+• Developed NLP-powered chatbots using IBM Watson
+• Technologies: SQL, Tableau, Python, IBM Watson
+
+TECHNICAL SKILLS
+
+Data & BI:
+SQL (PostgreSQL, MySQL), Power BI, Tableau, Excel
+
+Languages:
+Python (Pandas, NumPy), JavaScript, TypeScript
+
+Backend & Automation:
+Node.js, Spring Boot, REST APIs, Redis, GitHub Actions
+
+AI & Integrations:
+Claude API, Anthropic MCP, DistilBERT, Groq, Sarvam
+
+Frontend & Cloud:
+React, Angular 17+, Tailwind CSS, GSAP, Render, Netlify
+
+NOTABLE PROJECTS
+
+Godown AI (WMS)
+Live data-to-AI injection pipeline fetching real-time warehouse metrics from PostgreSQL into LLMs
+Link: wmsai.netlify.app
+
+EAMCET Admission Analytics
+1.2MB raw exam datasets transformed into MySQL database with Node.js API
+Link: svgroups.netlify.app
+
+New Music Palace (NMP)
+100-SKU e-commerce storefront with Pandas data pipeline, 90+ Lighthouse scores
+Link: nmpstore.netlify.app
+
+EDUCATION
+Currently pursuing advanced certifications in AI and Full-Stack Development
+
+CERTIFICATIONS & COURSES
+• Advanced Full-Stack Development
+• Data Analytics with SQL
+• AI Systems Architecture
+
+---
+Note: This is a text representation. For the complete PDF resume, please visit my GitHub profile.
+Generated with React + Tailwind CSS + GSAP

@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+* {
+  @apply transition-colors duration-300;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-slate-950 text-slate-200;
+  background-color: #0f172a;
+}
+
+/* Glassmorphism effect */
+.glass {
+  @apply backdrop-blur-md bg-white/10 border border-white/20 rounded-lg;
+}
+
+.glass-dark {
+  @apply backdrop-blur-md bg-slate-900/40 border border-slate-700/50 rounded-lg;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-teal-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-teal-400;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    @apply !transition-none !duration-0;
+    animation-duration: 0.01ms !important;
+  }
+}

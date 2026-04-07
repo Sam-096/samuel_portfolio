@@ -63,7 +63,7 @@ export const Hero = () => {
         </div>
 
         {/* Description */}
-        <p className="text-lg md:text-2xl text-bs-gray max-w-3xl mx-auto mb-16 md:mb-20 leading-relaxed font-light">
+        <p className="text-lg md:text-2xl text-bs-gray max-w-3xl mx-auto mb-16 md:mb-20 leading-8 font-light">
           2+ years shipping production-grade SaaS platforms. Specializing in <span className="font-bold text-bs-black">real-time SQL pipelines</span>, <span className="font-bold text-bs-black">AI automation</span>, and <span className="font-bold text-bs-black">enterprise dashboards</span> that solve problems at scale.
         </p>
 

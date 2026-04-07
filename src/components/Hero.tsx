@@ -43,75 +43,94 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-white dotted-bg-dense flex items-center justify-center px-4 py-20 relative overflow-hidden">
-      <div className="max-w-5xl mx-auto text-center z-10 w-full">
-        {/* Headline */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-bs-black mb-6 md:mb-8 leading-tight max-w-4xl mx-auto">
-          Full Stack Developer & AI Systems Engineer
+    <section className="min-h-screen bg-white dotted-bg-dense flex items-center justify-center px-4 py-24 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto text-center z-10 w-full">
+        {/* Headline with colored accent */}
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-bs-black mb-8 md:mb-10 leading-tight max-w-5xl mx-auto">
+          Full Stack Developer &amp;{' '}
+          <span className="text-bs-yellow">AI Systems</span>{' '}
+          Engineer
         </h1>
 
         {/* Subheadline with typewriter effect */}
-        <div className="mb-10 md:mb-14 h-12 md:h-16 flex items-center justify-center">
-          <div className="text-2xl md:text-4xl font-bold text-bs-black">
-            <span ref={typewriterRef} className="border-r-4 border-bs-yellow pr-2 inline-block">
+        <div className="mb-14 md:mb-20 min-h-20 md:min-h-24 flex items-center justify-center">
+          <div className="text-3xl md:text-5xl font-bold text-bs-black">
+            <span ref={typewriterRef} className="border-r-4 border-bs-yellow pr-3 inline-block">
               Building next-gen data systems
             </span>
-            <span ref={cursorRef} className="text-bs-yellow animate-blink">|</span>
+            <span ref={cursorRef} className="text-bs-yellow animate-blink ml-1">|</span>
           </div>
         </div>
 
         {/* Description */}
-        <p className="text-base md:text-lg text-bs-gray max-w-2xl mx-auto mb-10 md:mb-14 leading-relaxed">
-          2+ years shipping production-grade SaaS platforms. Specializing in real-time SQL pipelines, AI automation, and enterprise dashboards that solve problems at scale.
+        <p className="text-lg md:text-2xl text-bs-gray max-w-3xl mx-auto mb-16 md:mb-20 leading-relaxed font-light">
+          2+ years shipping production-grade SaaS platforms. Specializing in <span className="font-bold text-bs-black">real-time SQL pipelines</span>, <span className="font-bold text-bs-black">AI automation</span>, and <span className="font-bold text-bs-black">enterprise dashboards</span> that solve problems at scale.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14 md:mb-20">
+        {/* CTA Buttons - Larger and more prominent */}
+        <div className="flex flex-col sm:flex-row gap-5 justify-center mb-20 md:mb-28">
           <button
             onClick={scrollToProjects}
-            className="group flex items-center justify-center gap-2 px-8 md:px-10 py-4 md:py-5 bg-bs-yellow text-bs-black font-bold rounded-lg hover:bg-opacity-90 transition-all duration-300 text-base md:text-lg"
+            className="group flex items-center justify-center gap-3 px-10 md:px-14 py-5 md:py-6 bg-bs-yellow text-bs-black font-black rounded-xl hover:shadow-2xl transition-all duration-300 text-lg md:text-2xl hover:-translate-y-1"
           >
             View My Work
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-6 h-6 md:w-7 md:h-7 group-hover:translate-x-2 transition-transform" />
           </button>
           <a
             href="https://github.com/Sam-096"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 px-8 md:px-10 py-4 md:py-5 border-2 border-bs-black text-bs-black font-bold rounded-lg hover:bg-bs-black hover:text-white transition-all duration-300 text-base md:text-lg"
+            className="flex items-center justify-center gap-3 px-10 md:px-14 py-5 md:py-6 border-3 border-bs-black text-bs-black font-black rounded-xl hover:bg-bs-black hover:text-white transition-all duration-300 text-lg md:text-2xl hover:-translate-y-1"
           >
             GitHub Profile
+            <Github className="w-6 h-6 md:w-7 md:h-7" />
           </a>
         </div>
 
-        {/* Social Links */}
-        <div className="flex justify-center gap-6 md:gap-8">
+        {/* Social Links - More spacing */}
+        <div className="flex justify-center gap-8 md:gap-10 mb-16 md:mb-20">
           <a
             href="https://github.com/Sam-096"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-12 h-12 border-2 border-bs-black rounded-lg hover:bg-bs-yellow hover:border-bs-yellow transition-all duration-300 group"
+            className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 border-2 border-bs-black rounded-lg hover:bg-bs-yellow hover:border-bs-yellow transition-all duration-300 group hover:shadow-lg hover:-translate-y-1"
             aria-label="GitHub"
           >
-            <Github className="w-6 h-6 text-bs-black group-hover:text-bs-black" />
+            <Github className="w-7 h-7 md:w-8 md:h-8 text-bs-black" />
           </a>
           <a
             href="https://linkedin.com/in/kottala-samuel"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-12 h-12 border-2 border-bs-black rounded-lg hover:bg-bs-blue hover:border-bs-blue transition-all duration-300 group"
+            className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 border-2 border-bs-black rounded-lg hover:bg-bs-blue hover:border-bs-blue transition-all duration-300 group hover:shadow-lg hover:-translate-y-1"
             aria-label="LinkedIn"
           >
-            <Linkedin className="w-6 h-6 text-bs-black group-hover:text-bs-black" />
+            <Linkedin className="w-7 h-7 md:w-8 md:h-8 text-bs-black" />
           </a>
         </div>
 
+        {/* Stats/Proof */}
+        <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 text-center mb-16 md:mb-20">
+          <div>
+            <p className="text-4xl md:text-5xl font-black text-bs-yellow">2+</p>
+            <p className="text-base md:text-lg text-bs-gray font-semibold mt-2">Years of Experience</p>
+          </div>
+          <div>
+            <p className="text-4xl md:text-5xl font-black text-bs-yellow">6+</p>
+            <p className="text-base md:text-lg text-bs-gray font-semibold mt-2">Production Projects</p>
+          </div>
+          <div>
+            <p className="text-4xl md:text-5xl font-black text-bs-yellow">80+</p>
+            <p className="text-base md:text-lg text-bs-gray font-semibold mt-2">Technologies</p>
+          </div>
+        </div>
+
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="flex flex-col items-center gap-2">
-            <span className="text-xs text-bs-gray uppercase tracking-widest font-bold">Scroll</span>
+            <span className="text-xs text-bs-gray uppercase tracking-widest font-black">Scroll</span>
             <svg className="w-6 h-6 text-bs-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </div>
         </div>

@@ -11,47 +11,49 @@ export const Projects = () => {
   }, [fadeUpOnScroll]);
 
   return (
-    <section id="projects" className="py-20 md:py-32 px-4 md:px-8 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="py-24 md:py-40 px-4 md:px-8 md:px-12 bg-white">
+      <div className="max-w-7xl mx-auto">
         {/* Section header */}
-        <h2 className="text-5xl md:text-6xl font-bold text-bs-black mb-6 leading-tight">
-          Featured <span className="text-bs-yellow">Projects</span>
-        </h2>
-        <p className="text-lg text-bs-gray max-w-2xl mb-16 md:mb-20">
-          Real problems, real solutions. From data pipelines to AI systems.
-        </p>
+        <div className="mb-20 md:mb-28">
+          <h2 className="text-6xl md:text-7xl font-black text-bs-black mb-6 leading-tight">
+            Featured <span className="text-bs-yellow">Projects</span>
+          </h2>
+          <p className="text-xl md:text-2xl text-bs-gray max-w-3xl leading-relaxed font-light">
+            Real problems, real solutions. From data pipelines to AI systems. Each project shipped to production, solving real business challenges.
+          </p>
+        </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="project-card group border-2 border-bs-black p-6 md:p-8 rounded-lg hover:border-bs-yellow hover:shadow-lg transition-all duration-300 hover:-translate-y-2 flex flex-col h-full"
+              className="project-card group border-3 border-bs-black p-8 md:p-10 rounded-xl hover:border-bs-yellow hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 flex flex-col h-full"
             >
               {/* Project Image */}
-              <div className="relative h-48 md:h-56 rounded-lg overflow-hidden mb-6 bg-gray-200">
+              <div className="relative h-64 md:h-72 rounded-lg overflow-hidden mb-8 bg-gray-200">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
 
               {/* Project Content */}
-              <h3 className="text-xl md:text-2xl font-bold text-bs-black mb-3 group-hover:text-bs-yellow transition-colors">
+              <h3 className="text-2xl md:text-3xl font-black text-bs-black mb-4 group-hover:text-bs-yellow transition-colors line-clamp-2">
                 {project.title}
               </h3>
 
-              <p className="text-base text-bs-gray mb-4 flex-1 leading-relaxed">
+              <p className="text-base md:text-lg text-bs-gray mb-6 flex-1 leading-relaxed font-medium">
                 {project.description}
               </p>
 
               {/* Highlights */}
               {project.highlights && project.highlights.length > 0 && (
-                <ul className="space-y-2 mb-6 text-sm">
+                <ul className="space-y-3 mb-8 text-base md:text-lg">
                   {project.highlights.slice(0, 2).map((highlight, i) => (
-                    <li key={i} className="text-bs-gray flex items-start gap-2">
-                      <span className="text-bs-yellow font-bold">→</span>
+                    <li key={i} className="text-bs-gray flex items-start gap-3 font-medium">
+                      <span className="text-bs-yellow font-black text-xl">→</span>
                       <span>{highlight}</span>
                     </li>
                   ))}
@@ -59,28 +61,28 @@ export const Projects = () => {
               )}
 
               {/* Tech Stack */}
-              <div className="mb-6">
-                <p className="text-xs font-bold text-bs-black uppercase tracking-widest mb-3">Tech Stack</p>
-                <div className="flex flex-wrap gap-2">
+              <div className="mb-8">
+                <p className="text-xs font-black text-bs-black uppercase tracking-widest mb-4">Tech Stack</p>
+                <div className="flex flex-wrap gap-3">
                   {project.stack.slice(0, 4).map((tech, i) => (
-                    <span key={i} className="text-xs px-3 py-1.5 bg-bs-yellow text-bs-black rounded font-semibold">
+                    <span key={i} className="text-sm px-4 py-2.5 bg-bs-yellow text-bs-black font-black rounded-lg hover:shadow-lg transition-all duration-300">
                       {tech}
                     </span>
                   ))}
-                  {project.stack.length > 4 && <span className="text-xs text-bs-gray px-2 py-1.5">+{project.stack.length - 4}</span>}
+                  {project.stack.length > 4 && <span className="text-sm text-bs-gray px-2 py-2.5 font-bold">+{project.stack.length - 4}</span>}
                 </div>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3 pt-6 border-t border-bs-black">
+              <div className="flex gap-4 pt-8 border-t-2 border-bs-black">
                 {project.liveLink && (
                   <a
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-bs-yellow text-bs-black font-bold rounded hover:opacity-90 transition-all duration-300 text-sm"
+                    className="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 bg-bs-yellow text-bs-black font-black rounded-lg hover:shadow-lg transition-all duration-300 text-base hover:-translate-y-1 group"
                   >
-                    <ExternalLink className="w-4 h-4" />
+                    <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     Live
                   </a>
                 )}
@@ -89,9 +91,9 @@ export const Projects = () => {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 border-2 border-bs-black text-bs-black font-bold rounded hover:bg-bs-black hover:text-white transition-all duration-300 text-sm"
+                    className="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 border-2 border-bs-black text-bs-black font-black rounded-lg hover:bg-bs-black hover:text-white transition-all duration-300 text-base hover:-translate-y-1 group"
                   >
-                    <Github className="w-4 h-4" />
+                    <Github className="w-5 h-5" />
                     Code
                   </a>
                 )}
@@ -101,15 +103,16 @@ export const Projects = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-20 md:mt-28 text-center">
+        <div className="mt-24 md:mt-32 text-center">
+          <p className="text-lg md:text-2xl text-bs-gray mb-8 font-medium">Want to see more?</p>
           <a
             href="https://github.com/Sam-096"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-bs-black text-white font-bold rounded-lg hover:translate-y-0.5 transition-all duration-300 text-lg group"
+            className="inline-flex items-center gap-4 px-12 md:px-16 py-6 md:py-8 bg-bs-black text-white font-black rounded-xl hover:shadow-2xl transition-all duration-300 text-lg md:text-2xl group hover:-translate-y-1"
           >
             Explore on GitHub
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
           </a>
         </div>
       </div>

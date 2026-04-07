@@ -23,7 +23,7 @@ export const useGSAPScroll = () => {
   }, []);
 
   /**
-   * Animate elements with fade-up on scroll - ensures visibility
+   * Animate elements with fade-up on scroll - faster, sharper feel
    */
   const fadeUpOnScroll = (selector: string, stagger = 0.1) => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -49,11 +49,11 @@ export const useGSAPScroll = () => {
           },
         },
         opacity: 0,
-        y: 30,
-        duration: 0.8,
+        y: 40,
+        duration: 0.6,  // Faster: reduced from 0.8s
         delay: index * stagger,
-        ease: 'power2.out',
-        overwrite: 'auto', // Prevent conflicting animations
+        ease: 'power3.out',
+        overwrite: 'auto',
       });
     });
   };

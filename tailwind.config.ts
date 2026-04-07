@@ -8,18 +8,24 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['IBM Plex Sans', 'Droid Sans', 'system-ui', 'sans-serif'],
-        display: ['IBM Plex Sans', 'Droid Sans', 'system-ui', 'sans-serif'],
-        mono: ['IBM Plex Mono', 'monospace'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['Inter', 'monospace'],
       },
       colors: {
-        // Blacksmith color scheme
-        'bs-black': '#000000',
-        'bs-dark': '#202020',
-        'bs-white': '#FFFFFF',
-        'bs-gray': '#333333',
-        'bs-yellow': '#F0FB29',  // Primary accent
-        'bs-blue': '#AEE3FD',    // Soft blue
+        // Monochromatic premium dark theme
+        'dark': {
+          50: '#f8f8f8',
+          100: '#f0f0f0',
+          200: '#e5e5e5',
+          300: '#d4d4d4',
+          400: '#a1a1a1',
+          500: '#737373',
+          600: '#525252',
+          700: '#404040',
+          800: '#262626',
+          900: '#171717',
+          950: '#050505',
+        },
       },
       spacing: {
         '128': '32rem',
@@ -31,31 +37,18 @@ export default {
         wide: '0.025em',
       },
       animation: {
-        'typewriter': 'typewriter 3.5s steps(40, end) 1s forwards',
-        'blink': 'blink 0.7s infinite',
-        'fade-in': 'fadeIn 0.8s ease-out',
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-up': 'slideUp 0.5s ease-out',
       },
       keyframes: {
-        typewriter: {
-          '0%': { width: '0' },
-          '100%': { width: '100%' },
-        },
-        blink: {
-          '0%, 49%': { borderColor: '#F0FB29', opacity: '1' },
-          '50%, 100%': { borderColor: 'transparent', opacity: '0.2' },
-        },
         fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-      },
-      backgroundImage: {
-        'dotted-pattern': `radial-gradient(circle, rgba(240, 251, 41, 0.1) 1px, transparent 1px)`,
-        'dotted-dense': `radial-gradient(circle, rgba(240, 251, 41, 0.15) 2px, transparent 2px)`,
-      },
-      backgroundSize: {
-        'dot-20': '20px 20px',
-        'dot-40': '40px 40px',
       },
     },
   },

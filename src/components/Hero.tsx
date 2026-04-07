@@ -7,7 +7,7 @@ export const Hero = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Typewriter effect
+    // Typewriter effect - FASTER (30ms per character instead of 50ms)
     if (typewriterRef.current) {
       const text = typewriterRef.current.textContent || '';
       typewriterRef.current.textContent = '';
@@ -18,11 +18,11 @@ export const Hero = () => {
         if (index < text.length) {
           typewriterRef.current!.textContent += text.charAt(index);
           index++;
-          setTimeout(typeWriter, 50);
+          setTimeout(typeWriter, 30);  // Reduced from 50ms
         }
       };
 
-      setTimeout(typeWriter, 800);
+      setTimeout(typeWriter, 500);  // Reduced initial delay
     }
 
     // Cursor blink
@@ -32,7 +32,7 @@ export const Hero = () => {
         duration: 0.7,
         repeat: -1,
         yoyo: true,
-        delay: 3,
+        delay: 2,  // Reduced from 3
       });
     }
   }, []);
@@ -71,46 +71,46 @@ export const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-5 justify-center mb-20 md:mb-28">
           <button
             onClick={scrollToProjects}
-            className="group flex items-center justify-center gap-3 px-10 md:px-14 py-5 md:py-6 bg-bs-yellow text-bs-black font-black rounded-xl hover:shadow-2xl hover:shadow-bs-yellow/50 transition-all duration-300 text-lg md:text-2xl hover:-translate-y-2 hover:scale-105"
+            className="group flex items-center justify-center gap-3 px-10 md:px-14 py-5 md:py-6 bg-bs-yellow text-bs-black font-black rounded-xl hover:shadow-2xl hover:shadow-bs-yellow/50 transition-all duration-300 text-lg md:text-2xl hover:-translate-y-1 hover:scale-102"
           >
             View My Work
-            <ArrowRight className="w-6 h-6 md:w-7 md:h-7 group-hover:translate-x-3 transition-transform" />
+            <ArrowRight className="w-6 h-6 md:w-7 md:h-7 group-hover:translate-x-2 transition-transform" />
           </button>
           <a
             href="https://github.com/Sam-096"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 px-10 md:px-14 py-5 md:py-6 border-3 border-bs-black text-bs-black font-black rounded-xl hover:bg-bs-black hover:text-white transition-all duration-300 text-lg md:text-2xl hover:-translate-y-2 hover:shadow-2xl hover:scale-105"
+            className="flex items-center justify-center gap-3 px-10 md:px-14 py-5 md:py-6 border-2 border-bs-black text-bs-black font-black rounded-xl hover:bg-bs-black hover:text-white transition-all duration-300 text-lg md:text-2xl hover:-translate-y-1 hover:shadow-2xl hover:scale-102"
           >
             GitHub Profile
             <Github className="w-6 h-6 md:w-7 md:h-7" />
           </a>
         </div>
 
-        {/* Social Links - More spacing */}
-        <div className="flex justify-center gap-8 md:gap-10 mb-16 md:mb-20">
+        {/* Social Links */}
+        <div className="flex justify-center gap-6 md:gap-8 mb-16 md:mb-20">
           <a
             href="https://github.com/Sam-096"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 border-2 border-bs-black rounded-lg hover:bg-bs-yellow hover:border-bs-yellow transition-all duration-300 group hover:shadow-lg hover:-translate-y-1"
+            className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 border-2 border-bs-black rounded-lg hover:bg-bs-yellow hover:border-bs-yellow transition-all duration-300 group hover:shadow-lg hover:-translate-y-1"
             aria-label="GitHub"
           >
-            <Github className="w-7 h-7 md:w-8 md:h-8 text-bs-black" />
+            <Github className="w-6 h-6 md:w-7 md:h-7 text-bs-black" />
           </a>
           <a
             href="https://linkedin.com/in/kottala-samuel"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 border-2 border-bs-black rounded-lg hover:bg-bs-blue hover:border-bs-blue transition-all duration-300 group hover:shadow-lg hover:-translate-y-1"
+            className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 border-2 border-bs-black rounded-lg hover:bg-bs-blue hover:border-bs-blue transition-all duration-300 group hover:shadow-lg hover:-translate-y-1"
             aria-label="LinkedIn"
           >
-            <Linkedin className="w-7 h-7 md:w-8 md:h-8 text-bs-black" />
+            <Linkedin className="w-6 h-6 md:w-7 md:h-7 text-bs-black" />
           </a>
         </div>
 
         {/* Stats/Proof */}
-        <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 text-center mb-16 md:mb-20">
+        <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 text-center mb-16 md:mb-20">
           <div>
             <p className="text-4xl md:text-5xl font-black text-bs-yellow">2+</p>
             <p className="text-base md:text-lg text-bs-gray font-semibold mt-2">Years of Experience</p>

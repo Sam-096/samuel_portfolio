@@ -25,7 +25,7 @@ export const Experience = () => {
         {/* Experience Timeline */}
         <div className="space-y-12 md:space-y-16">
           {experiences.map((exp) => (
-            <div key={exp.id} className="experience-card border-l-4 border-bs-yellow pl-8 md:pl-10 hover:pl-12 transition-all duration-300">
+            <div key={exp.id} className="experience-card border-l-2 border-bs-yellow pl-8 md:pl-10 hover:pl-12 transition-all duration-300">
               {/* Period */}
               <span className="inline-block text-sm font-black text-bs-yellow uppercase tracking-widest mb-4">
                 {exp.period}

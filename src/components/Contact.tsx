@@ -4,7 +4,7 @@ export const Contact = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="bg-bs-black border-t-4 border-bs-yellow text-white py-24 md:py-32 px-4 md:px-8 md:px-12">
+    <footer id="contact" className="bg-bs-black border-t-4 border-bs-yellow text-white py-16 md:py-24 px-4 md:px-8 md:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-20 mb-20 md:mb-28">

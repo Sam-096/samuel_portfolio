@@ -1,0 +1,93 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="eamcetBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a237e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#283593;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#eamcetBg)"/>
+
+  <!-- Header -->
+  <rect width="1920" height="100" fill="#0d1b5e"/>
+  <text x="80" y="60" font-size="32" font-weight="bold" fill="white" font-family="sans-serif">EAMCET Admission Analytics</text>
+
+  <!-- KPI Dashboard -->
+  <rect x="80" y="140" width="420" height="180" rx="8" fill="#1a237e" stroke="#5c6bc0" stroke-width="2"/>
+  <text x="100" y="170" font-size="12" fill="#90caf9" font-family="sans-serif" font-weight="bold">TOTAL CANDIDATES</text>
+  <text x="100" y="220" font-size="48" fill="#64b5f6" font-family="sans-serif" font-weight="bold">1,24,532</text>
+  <text x="100" y="260" font-size="11" fill="#b3e5fc" font-family="sans-serif">From 1.2MB raw dataset</text>
+
+  <rect x="560" y="140" width="420" height="180" rx="8" fill="#1a237e" stroke="#7e57c2" stroke-width="2"/>
+  <text x="580" y="170" font-size="12" fill="#ce93d8" font-family="sans-serif" font-weight="bold">AVG SCORE</text>
+  <text x="580" y="220" font-size="48" fill="#ba68c8" font-family="sans-serif" font-weight="bold">78.5%</text>
+  <text x="580" y="260" font-size="11" fill="#f48fb1" font-family="sans-serif">Live KPI Calculation</text>
+
+  <rect x="1040" y="140" width="800" height="180" rx="8" fill="#1a237e" stroke="#42a5f5" stroke-width="2"/>
+  <text x="1060" y="170" font-size="12" fill="#42a5f5" font-family="sans-serif" font-weight="bold">COLLEGE DISTRIBUTION</text>
+
+  <!-- Bar chart simulation -->
+  <g transform="translate(1100, 220)">
+    <rect x="0" y="80" width="40" height="60" fill="#42a5f5"/>
+    <text x="5" y="160" font-size="9" fill="#aaa" font-family="sans-serif">BITS</text>
+
+    <rect x="60" y="40" width="40" height="100" fill="#ab47bc"/>
+    <text x="65" y="160" font-size="9" fill="#aaa" font-family="sans-serif">JNTU</text>
+
+    <rect x="120" y="70" width="40" height="70" fill="#29b6f6"/>
+    <text x="120" y="160" font-size="9" fill="#aaa" font-family="sans-serif">IIT</text>
+
+    <rect x="180" y="50" width="40" height="90" fill="#66bb6a"/>
+    <text x="180" y="160" font-size="9" fill="#aaa" font-family="sans-serif">NIT</text>
+
+    <rect x="240" y="30" width="40" height="110" fill="#ffa726"/>
+    <text x="240" y="160" font-size="9" fill="#aaa" font-family="sans-serif">Other</text>
+  </g>
+
+  <!-- Data Processing Pipeline -->
+  <rect x="80" y="360" width="1760" height="280" rx="8" fill="#0d1b5e" border="1px solid #5c6bc0"/>
+  <text x="100" y="390" font-size="14" font-weight="bold" fill="white" font-family="sans-serif">Data Processing Pipeline</text>
+
+  <!-- Pipeline steps -->
+  <g transform="translate(120, 420)">
+    <!-- Raw Data -->
+    <rect x="0" y="0" width="160" height="80" rx="5" fill="#1a237e" stroke="#42a5f5" stroke-width="2"/>
+    <text x="20" y="25" font-size="11" fill="#42a5f5" font-family="sans-serif" font-weight="bold">RAW DATASET</text>
+    <text x="20" y="45" font-size="10" fill="#aaa" font-family="sans-serif">1.2MB</text>
+    <text x="20" y="65" font-size="10" fill="#aaa" font-family="sans-serif">Exam Data</text>
+
+    <!-- Arrow -->
+    <line x1="180" y1="40" x2="240" y2="40" stroke="#42a5f5" stroke-width="2"/>
+    <polygon points="240,40 230,35 230,45" fill="#42a5f5"/>
+
+    <!-- MySQL DB -->
+    <rect x="260" y="0" width="160" height="80" rx="5" fill="#1a237e" stroke="#66bb6a" stroke-width="2"/>
+    <text x="280" y="25" font-size="11" fill="#66bb6a" font-family="sans-serif" font-weight="bold">MYSQL DB</text>
+    <text x="280" y="45" font-size="10" fill="#aaa" font-family="sans-serif">Structured</text>
+    <text x="280" y="65" font-size="10" fill="#aaa" font-family="sans-serif">Indexed</text>
+
+    <!-- Arrow -->
+    <line x1="440" y1="40" x2="500" y2="40" stroke="#66bb6a" stroke-width="2"/>
+    <polygon points="500,40 490,35 490,45" fill="#66bb6a"/>
+
+    <!-- Node API -->
+    <rect x="520" y="0" width="160" height="80" rx="5" fill="#1a237e" stroke="#ab47bc" stroke-width="2"/>
+    <text x="540" y="25" font-size="11" fill="#ab47bc" font-family="sans-serif" font-weight="bold">NODE.JS API</text>
+    <text x="540" y="45" font-size="10" fill="#aaa" font-family="sans-serif">REST</text>
+    <text x="540" y="65" font-size="10" fill="#aaa" font-family="sans-serif">Endpoints</text>
+
+    <!-- Arrow -->
+    <line x1="700" y1="40" x2="760" y2="40" stroke="#ab47bc" stroke-width="2"/>
+    <polygon points="760,40 750,35 750,45" fill="#ab47bc"/>
+
+    <!-- React Dashboard -->
+    <rect x="780" y="0" width="160" height="80" rx="5" fill="#1a237e" stroke="#ffa726" stroke-width="2"/>
+    <text x="800" y="25" font-size="11" fill="#ffa726" font-family="sans-serif" font-weight="bold">REACT UI</text>
+    <text x="800" y="45" font-size="10" fill="#aaa" font-family="sans-serif">Live KPIs</text>
+    <text x="800" y="65" font-size="10" fill="#aaa" font-family="sans-serif">Visualizations</text>
+  </g>
+
+  <!-- Stats -->
+  <text x="100" y="700" font-size="14" fill="#42a5f5" font-family="sans-serif" font-weight="bold">📊 10,000+ Student Records Indexed  |  Real-time KPI Updates  |  90+ Lighthouse Score</text>
+  <text x="100" y="1050" font-size="12" fill="#666" font-family="sans-serif">📷 Screenshot your analytics dashboard at svgroups.netlify.app</text>
+</svg>

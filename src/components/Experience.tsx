@@ -27,11 +27,17 @@ export const Experience = () => {
   }, [fadeUpOnScroll]);
 
   return (
-    <section className="py-20 md:py-32 px-4 md:px-8 lg:px-12 bg-gradient-to-b from-dark-900 to-dark-800">
+    <section className="py-20 md:py-32 px-4 md:px-8 lg:px-12 bg-dark-900">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-16 md:mb-20 text-center">
-          Career Journey
-        </h2>
+        {/* Section header with unique styling */}
+        <div className="mb-20 md:mb-28">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-4 leading-tight">
+            <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Where</span> I've been
+          </h2>
+          <p className="text-slate-400 text-sm md:text-base max-w-xl">
+            2+ years shipping production systems for fintech, e-commerce, and AI platforms. Each role shaped my approach to building.
+          </p>
+        </div>
 
         {/* Timeline */}
         <div className="relative">

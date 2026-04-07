@@ -7,8 +7,8 @@ export const Skills = () => {
   const { fadeUpOnScroll, hoverScale } = useGSAPScroll();
 
   useEffect(() => {
-    fadeUpOnScroll('.skill-card', 0.1);
-    hoverScale('.skill-card', 1.05, 0.3);
+    fadeUpOnScroll('.skill-card', 0.12);
+    hoverScale('.skill-card', 1.02, 0.3);
   }, [fadeUpOnScroll, hoverScale]);
 
   const getIconComponent = (iconName: string) => {
@@ -50,11 +50,17 @@ export const Skills = () => {
   };
 
   return (
-    <section className="py-20 md:py-32 px-4 md:px-8 lg:px-12 bg-dark-900">
+    <section className="py-20 md:py-32 px-4 md:px-8 lg:px-12 bg-dark-900 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-16 md:mb-20 text-center">
-          Technical Skills
-        </h2>
+        {/* Section header with unique styling */}
+        <div className="mb-20 md:mb-28">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-4 leading-tight">
+            The <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">toolbox</span> that powers it
+          </h2>
+          <p className="text-slate-400 text-sm md:text-base max-w-2xl">
+            80+ technologies across data, AI, full-stack development, and cloud infrastructure. Always expanding the toolkit.
+          </p>
+        </div>
 
         {/* Skills Grid - responsive: 1 col on mobile, 2 on tablet, 3 on desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

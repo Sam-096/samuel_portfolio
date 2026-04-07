@@ -13,7 +13,7 @@ export const Experience = () => {
     <section id="experience" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white border-b-2 border-black">
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="mb-20 border-2 border-black p-8 bg-neon-yellow">
+        <div className="mb-20 border-2 border-black p-8 bg-[#e4ff00]">
           <h2 className="text-5xl md:text-7xl font-black text-black mb-4 tracking-tight uppercase">
             CAREER
           </h2>
@@ -31,7 +31,7 @@ export const Experience = () => {
             >
               {/* Period Badge */}
               <div className="inline-block border-2 border-black px-4 py-2 bg-black mb-4">
-                <span className="text-neon-yellow font-black text-xs uppercase tracking-widest">
+                <span className="text-[#e4ff00] font-black text-xs uppercase tracking-widest">
                   {exp.period}
                 </span>
               </div>
@@ -42,7 +42,7 @@ export const Experience = () => {
               </h3>
 
               {/* Company */}
-              <p className="text-xl md:text-2xl text-neon-yellow font-black mb-4 uppercase">
+              <p className="text-xl md:text-2xl text-[#e4ff00] font-black mb-4 uppercase">
                 {exp.company}
               </p>
 
@@ -55,7 +55,7 @@ export const Experience = () => {
               <ul className="space-y-2 mb-6 border-t-2 border-black pt-4">
                 {exp.responsibilities.map((resp, i) => (
                   <li key={i} className="flex items-start gap-3 text-base text-black font-bold">
-                    <span className="text-neon-yellow font-black text-lg">▼</span>
+                    <span className="text-[#e4ff00] font-black text-lg">▼</span>
                     <span>{resp}</span>
                   </li>
                 ))}
@@ -66,7 +66,7 @@ export const Experience = () => {
                 {exp.technologies.map((tech, i) => (
                   <span
                     key={i}
-                    className="text-xs px-3 py-2 bg-white border-2 border-black text-black font-black uppercase hover:bg-black hover:text-neon-yellow transition-all"
+                    className="text-xs px-3 py-2 bg-white border-2 border-black text-black font-black uppercase hover:bg-black hover:text-[#e4ff00] transition-all"
                   >
                     {tech}
                   </span>

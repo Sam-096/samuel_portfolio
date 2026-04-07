@@ -10,14 +10,14 @@ export const Skills = () => {
   }, [fadeUpOnScroll]);
 
   return (
-    <section id="skills" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-neon-yellow border-b-2 border-black">
+    <section id="skills" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-[#e4ff00] border-b-2 border-black">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-20 border-2 border-black p-8 bg-black">
-          <h2 className="text-5xl md:text-7xl font-black text-neon-yellow mb-4 tracking-tight uppercase">
+          <h2 className="text-5xl md:text-7xl font-black text-[#e4ff00] mb-4 tracking-tight uppercase">
             TECHNICAL SKILLS
           </h2>
-          <p className="text-lg text-neon-yellow font-bold">
+          <p className="text-lg text-[#e4ff00] font-bold">
             80+ Technologies. Always shipping. Always learning.
           </p>
         </div>
@@ -28,14 +28,14 @@ export const Skills = () => {
             <div
               key={category.id}
               className={`skill-card border-2 border-black p-6 md:p-8 transition-all duration-200 ${
-                idx === 1 || idx === 4 ? 'bg-black hover:border-neon-yellow' : 'bg-white hover:bg-black'
+                idx === 1 || idx === 4 ? 'bg-black hover:border-[#e4ff00]' : 'bg-white hover:bg-black'
               } ${
                 idx % 2 === 0 ? 'md:border-r-0' : ''
               } ${idx < 3 ? 'md:border-b-0 lg:border-b-2' : ''}`}
             >
               {/* Category Title */}
               <h3 className={`text-xl md:text-2xl font-black mb-6 uppercase border-b-2 pb-4 transition-colors ${
-                idx === 1 || idx === 4 ? 'text-neon-yellow border-neon-yellow hover:text-black' : 'text-black border-black hover:text-neon-yellow'
+                idx === 1 || idx === 4 ? 'text-[#e4ff00] border-[#e4ff00] hover:text-black' : 'text-black border-black hover:text-[#e4ff00]'
               }`}>
                 {category.name}
               </h3>
@@ -45,10 +45,10 @@ export const Skills = () => {
                 {category.skills.map((skill, index) => (
                   <div key={index} className="flex items-center gap-3 group">
                     <span className={`w-2 h-2 flex-shrink-0 transition-colors ${
-                      idx === 1 || idx === 4 ? 'bg-neon-yellow group-hover:bg-black' : 'bg-black group-hover:bg-neon-yellow'
+                      idx === 1 || idx === 4 ? 'bg-[#e4ff00] group-hover:bg-black' : 'bg-black group-hover:bg-[#e4ff00]'
                     }`}></span>
                     <span className={`text-sm md:text-base font-semibold transition-all group-hover:font-black ${
-                      idx === 1 || idx === 4 ? 'text-neon-yellow group-hover:text-black' : 'text-black group-hover:text-neon-yellow'
+                      idx === 1 || idx === 4 ? 'text-[#e4ff00] group-hover:text-black' : 'text-black group-hover:text-[#e4ff00]'
                     }`}>
                       {skill.name}
                     </span>

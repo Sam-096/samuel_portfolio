@@ -7,7 +7,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-brutal-yellow border-b-2 border-black grid-pattern flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 relative">
+    <section className="min-h-screen bg-[#e4ff00] border-b-2 border-black grid-pattern flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 relative">
       <div className="max-w-7xl mx-auto text-center z-10 w-full">
         {/* Pixelated Headline */}
         <h1 className="font-pixel text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black mb-8 leading-tight tracking-tight transform hover:scale-105 transition-transform">
@@ -45,7 +45,7 @@ export const Hero = () => {
           {/* Primary Button - Neon Yellow */}
           <button
             onClick={scrollToProjects}
-            className="group flex items-center justify-center gap-2 px-8 md:px-10 py-4 md:py-5 bg-neon-yellow text-black font-black border-2 border-black hover:bg-black hover:text-neon-yellow transition-all duration-200 text-base md:text-lg transform hover:scale-105 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+            className="group flex items-center justify-center gap-2 px-8 md:px-10 py-4 md:py-5 bg-[#e4ff00] text-black font-black border-2 border-black hover:bg-black hover:text-[#e4ff00] transition-all duration-200 text-base md:text-lg transform hover:scale-105 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
           >
             VIEW WORK
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -56,7 +56,7 @@ export const Hero = () => {
             href="https://github.com/Sam-096"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 px-8 md:px-10 py-4 md:py-5 border-2 border-black text-black bg-white hover:bg-black hover:text-neon-yellow font-black transition-all duration-200 text-base md:text-lg transform hover:scale-105 hover:shadow-[4px_4px_0px_0px_rgba(228,255,0,0.5)]"
+            className="flex items-center justify-center gap-2 px-8 md:px-10 py-4 md:py-5 border-2 border-black text-black bg-white hover:bg-black hover:text-[#e4ff00] font-black transition-all duration-200 text-base md:text-lg transform hover:scale-105 hover:shadow-[4px_4px_0px_0px_rgba(228,255,0,0.5)]"
           >
             GITHUB
             <ExternalLink className="w-5 h-5" />

@@ -14,7 +14,7 @@ export const Projects = () => {
     <section id="projects" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white border-b-2 border-black">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="mb-20 border-2 border-black p-8 bg-neon-yellow">
+        <div className="mb-20 border-2 border-black p-8 bg-[#e4ff00]">
           <h2 className="text-5xl md:text-7xl font-black text-black mb-4 tracking-tight">
             FEATURED PROJECTS
           </h2>
@@ -28,12 +28,12 @@ export const Projects = () => {
           {projects.map((project, idx) => (
             <div
               key={project.id}
-              className={`project-card group border-2 border-black p-6 md:p-8 flex flex-col h-full bg-white hover:shadow-xl hover:border-neon-yellow transition-all duration-200 ${
+              className={`project-card group border-2 border-black p-6 md:p-8 flex flex-col h-full bg-white hover:shadow-xl hover:border-[#e4ff00] transition-all duration-200 ${
                 idx % 2 === 0 ? 'md:border-r-0' : ''
               } ${idx < 3 ? 'md:border-b-0 lg:border-b-2' : ''}`}
             >
               {/* Project Image */}
-              <div className="relative h-48 md:h-56 border-2 border-black overflow-hidden mb-6 bg-black flex items-center justify-center hover:bg-neon-yellow transition-colors">
+              <div className="relative h-48 md:h-56 border-2 border-black overflow-hidden mb-6 bg-black flex items-center justify-center hover:bg-[#e4ff00] transition-colors">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -42,7 +42,7 @@ export const Projects = () => {
                     (e.target as HTMLImageElement).style.display = 'none';
                     const parent = (e.target as HTMLImageElement).parentElement;
                     if (parent) {
-                      parent.innerHTML = `<div class="flex items-center justify-center w-full h-full bg-black text-neon-yellow font-black text-center px-4 text-sm">${project.title}</div>`;
+                      parent.innerHTML = `<div class="flex items-center justify-center w-full h-full bg-black text-[#e4ff00] font-black text-center px-4 text-sm">${project.title}</div>`;
                     }
                   }}
                 />
@@ -77,7 +77,7 @@ export const Projects = () => {
                     <span
                       key={i}
                       className={`text-xs px-3 py-2 border-2 border-black font-bold uppercase transition-all ${
-                        i % 2 === 1 ? 'bg-neon-yellow text-black hover:bg-black hover:text-neon-yellow' : 'bg-white text-black hover:bg-black hover:text-white'
+                        i % 2 === 1 ? 'bg-[#e4ff00] text-black hover:bg-black hover:text-[#e4ff00]' : 'bg-white text-black hover:bg-black hover:text-white'
                       }`}
                     >
                       {tech}
@@ -96,7 +96,7 @@ export const Projects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-neon-yellow text-black font-black border-2 border-black hover:bg-black hover:text-neon-yellow transition-all text-sm uppercase"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#e4ff00] text-black font-black border-2 border-black hover:bg-black hover:text-[#e4ff00] transition-all text-sm uppercase"
                   >
                     <ExternalLink className="w-4 h-4" />
                     Live
@@ -120,12 +120,12 @@ export const Projects = () => {
 
         {/* CTA Section */}
         <div className="mt-20 p-8 border-2 border-black bg-black text-center">
-          <p className="text-neon-yellow font-black text-lg mb-6 uppercase">WANT MORE?</p>
+          <p className="text-[#e4ff00] font-black text-lg mb-6 uppercase">WANT MORE?</p>
           <a
             href="https://github.com/Sam-096"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-10 py-4 bg-neon-yellow text-black font-black border-2 border-black hover:bg-black hover:text-neon-yellow transition-all text-base uppercase transform hover:scale-105"
+            className="inline-block px-10 py-4 bg-[#e4ff00] text-black font-black border-2 border-black hover:bg-black hover:text-[#e4ff00] transition-all text-base uppercase transform hover:scale-105"
           >
             VIEW ALL PROJECTS
           </a>

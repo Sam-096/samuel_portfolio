@@ -30,7 +30,7 @@ export const Contact = () => {
               <li>
                 <a
                   href="#projects"
-                  className="text-[#e4ff00] hover:text-black hover:block font-black text-sm uppercase transition-all"
+                  className="text-[#e4ff00] font-black text-sm uppercase transition-all"
                 >
                   → PROJECTS
                 </a>
@@ -40,7 +40,7 @@ export const Contact = () => {
                   href="https://github.com/Sam-096"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#e4ff00] hover:text-black hover:block font-black text-sm uppercase transition-all"
+                  className="text-[#e4ff00] font-black text-sm uppercase transition-all"
                 >
                   → GITHUB
                 </a>
@@ -50,7 +50,7 @@ export const Contact = () => {
                   href="https://linkedin.com/in/kottala-samuel"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#e4ff00] hover:text-black hover:block font-black text-sm uppercase transition-all"
+                  className="text-[#e4ff00] font-black text-sm uppercase transition-all"
                 >
                   → LINKEDIN
                 </a>

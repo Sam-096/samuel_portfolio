@@ -27,12 +27,16 @@ export const Skills = () => {
           {skillCategories.map((category, idx) => (
             <div
               key={category.id}
-              className={`skill-card border-2 border-black p-6 md:p-8 bg-white hover:bg-black transition-all duration-200 ${
+              className={`skill-card border-2 border-black p-6 md:p-8 transition-all duration-200 ${
+                idx === 1 || idx === 4 ? 'bg-black hover:border-neon-yellow' : 'bg-white hover:bg-black'
+              } ${
                 idx % 2 === 0 ? 'md:border-r-0' : ''
               } ${idx < 3 ? 'md:border-b-0 lg:border-b-2' : ''}`}
             >
               {/* Category Title */}
-              <h3 className="text-xl md:text-2xl font-black text-black mb-6 uppercase border-b-2 border-black pb-4 hover:text-neon-yellow transition-colors">
+              <h3 className={`text-xl md:text-2xl font-black mb-6 uppercase border-b-2 pb-4 transition-colors ${
+                idx === 1 || idx === 4 ? 'text-neon-yellow border-neon-yellow hover:text-black' : 'text-black border-black hover:text-neon-yellow'
+              }`}>
                 {category.name}
               </h3>
 
@@ -40,8 +44,12 @@ export const Skills = () => {
               <div className="space-y-3">
                 {category.skills.map((skill, index) => (
                   <div key={index} className="flex items-center gap-3 group">
-                    <span className="w-2 h-2 bg-black flex-shrink-0 group-hover:bg-neon-yellow transition-colors"></span>
-                    <span className="text-sm md:text-base text-black font-semibold group-hover:font-black transition-all group-hover:text-neon-yellow">
+                    <span className={`w-2 h-2 flex-shrink-0 transition-colors ${
+                      idx === 1 || idx === 4 ? 'bg-neon-yellow group-hover:bg-black' : 'bg-black group-hover:bg-neon-yellow'
+                    }`}></span>
+                    <span className={`text-sm md:text-base font-semibold transition-all group-hover:font-black ${
+                      idx === 1 || idx === 4 ? 'text-neon-yellow group-hover:text-black' : 'text-black group-hover:text-neon-yellow'
+                    }`}>
                       {skill.name}
                     </span>
                   </div>

@@ -28,7 +28,7 @@ export const Projects = () => {
           {projects.map((project, idx) => (
             <div
               key={project.id}
-              className={`project-card group border-2 border-black p-6 md:p-8 flex flex-col h-full bg-white hover:shadow-xl transition-all duration-200 ${
+              className={`project-card group border-2 border-black p-6 md:p-8 flex flex-col h-full bg-white hover:shadow-xl hover:border-neon-yellow transition-all duration-200 ${
                 idx % 2 === 0 ? 'md:border-r-0' : ''
               } ${idx < 3 ? 'md:border-b-0 lg:border-b-2' : ''}`}
             >
@@ -76,7 +76,9 @@ export const Projects = () => {
                   {project.stack.slice(0, 4).map((tech, i) => (
                     <span
                       key={i}
-                      className="text-xs px-3 py-2 bg-white border-2 border-black text-black font-bold uppercase hover:bg-black hover:text-white transition-all"
+                      className={`text-xs px-3 py-2 border-2 border-black font-bold uppercase transition-all ${
+                        i % 2 === 1 ? 'bg-neon-yellow text-black hover:bg-black hover:text-neon-yellow' : 'bg-white text-black hover:bg-black hover:text-white'
+                      }`}
                     >
                       {tech}
                     </span>

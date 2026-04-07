@@ -15,6 +15,7 @@ export default {
       colors: {
         // Brutalist palette - stark and harsh
         'neon-yellow': '#e4ff00',
+        'brutal-yellow': '#e4ff00',
       },
       spacing: {
         '128': '32rem',

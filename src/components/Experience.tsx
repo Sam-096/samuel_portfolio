@@ -1,16 +1,19 @@
-import { useEffect } from 'react';
-import { experiences } from '../data/experience';
-import { useGSAPScroll } from '../hooks/useGSAPScroll';
+import { useEffect } from "react";
+import { experiences } from "../data/experience";
+import { useGSAPScroll } from "../hooks/useGSAPScroll";
 
 export const Experience = () => {
   const { fadeUpOnScroll } = useGSAPScroll();
 
   useEffect(() => {
-    fadeUpOnScroll('.experience-card', 0.15);
+    fadeUpOnScroll(".experience-card", 0.15);
   }, [fadeUpOnScroll]);
 
   return (
-    <section id="experience" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white border-b-2 border-black">
+    <section
+      id="experience"
+      className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white border-b-2 border-black"
+    >
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
         <div className="mb-20 border-2 border-black p-8 bg-[#e4ff00]">
@@ -18,7 +21,7 @@ export const Experience = () => {
             CAREER
           </h2>
           <p className="text-lg text-black font-bold">
-            2+ Years Building Production Systems at Scale
+            3 Years Building Production Systems at Scale
           </p>
         </div>
 
@@ -27,7 +30,7 @@ export const Experience = () => {
           {experiences.map((exp) => (
             <div
               key={exp.id}
-              className="experience-card border-2 border-black p-8 bg-white hover:shadow-lg transition-all duration-200 hover:translate-y-1"
+              className="experience-card border-2 border-black p-8 bg-white hover:shadow-lg transition-all duration-200 hover:translate-y-1 card-dotted"
             >
               {/* Period Badge */}
               <div className="inline-block border-2 border-black px-4 py-2 bg-black mb-4">
@@ -42,7 +45,7 @@ export const Experience = () => {
               </h3>
 
               {/* Company */}
-              <p className="text-xl md:text-2xl text-[#e4ff00] font-black mb-4 uppercase">
+              <p className="text-xl md:text-2xl text-black font-black mb-4 uppercase inline-block px-3 py-2 border-2 border-[#AEE3FD] bg-[#AEE3FD] hover:bg-black hover:text-[#AEE3FD] transition-all">
                 {exp.company}
               </p>
 
@@ -54,7 +57,10 @@ export const Experience = () => {
               {/* Responsibilities */}
               <ul className="space-y-2 mb-6 border-t-2 border-black pt-4">
                 {exp.responsibilities.map((resp, i) => (
-                  <li key={i} className="flex items-start gap-3 text-base text-black font-bold">
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 text-base text-black font-bold"
+                  >
                     <span className="text-[#e4ff00] font-black text-lg">▼</span>
                     <span>{resp}</span>
                   </li>

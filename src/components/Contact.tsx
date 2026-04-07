@@ -4,7 +4,10 @@ export const Contact = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="bg-black border-t-2 border-black text-white py-20 md:py-28 px-4 sm:px-6 lg:px-8">
+    <footer
+      id="contact"
+      className="bg-black border-t-2 border-black text-white py-20 md:py-28 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 border-b-2 border-[#e4ff00] pb-16">
@@ -25,17 +28,30 @@ export const Contact = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#projects" className="text-[#e4ff00] hover:text-black hover:block font-black text-sm uppercase transition-all">
+                <a
+                  href="#projects"
+                  className="text-[#e4ff00] hover:text-black hover:block font-black text-sm uppercase transition-all"
+                >
                   → PROJECTS
                 </a>
               </li>
               <li>
-                <a href="https://github.com/Sam-096" target="_blank" rel="noopener noreferrer" className="text-[#e4ff00] hover:text-black hover:block font-black text-sm uppercase transition-all">
+                <a
+                  href="https://github.com/Sam-096"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#e4ff00] hover:text-black hover:block font-black text-sm uppercase transition-all"
+                >
                   → GITHUB
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/kottala-samuel" target="_blank" rel="noopener noreferrer" className="text-[#e4ff00] hover:text-black hover:block font-black text-sm uppercase transition-all">
+                <a
+                  href="https://linkedin.com/in/kottala-samuel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#e4ff00] hover:text-black hover:block font-black text-sm uppercase transition-all"
+                >
                   → LINKEDIN
                 </a>
               </li>
@@ -54,7 +70,9 @@ export const Contact = () => {
               <Mail className="w-5 h-5" />
               EMAIL
             </a>
-            <p className="text-black text-sm mt-4 font-black">Open to opportunities</p>
+            <p className="text-black text-sm mt-4 font-black">
+              Open to opportunities
+            </p>
           </div>
         </div>
 
@@ -62,7 +80,7 @@ export const Contact = () => {
         <div className="border-t-2 border-[#e4ff00] pt-8 md:pt-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-xs md:text-sm text-[#e4ff00] font-bold uppercase">
             <p>© {currentYear} KOTTALA SAMUEL. ALL RIGHTS RESERVED.</p>
-            <p>ENGINEERED FOR IMPACT • REACT • TYPESCRIPT • PRODUCTION</p>
+            <p>OPEN FOR WORK • FULL TIME • PARTIME • CONTRACT</p>
           </div>
         </div>
       </div>

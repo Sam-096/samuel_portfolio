@@ -1,8 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Github, Linkedin, Download, ArrowDown, Code2, Database, Zap, Layers } from 'lucide-react';
 import gsap from 'gsap';
 
 export const Hero = () => {
+  const badgesRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     // Animate hero text on mount
     setTimeout(() => {
@@ -18,10 +20,10 @@ export const Hero = () => {
         headlineSpans,
         {
           opacity: 0,
-          y: 20,
-          duration: 0.6,
-          stagger: 0.05,
-          ease: 'power2.out',
+          y: 30,
+          duration: 0.7,
+          stagger: 0.08,
+          ease: 'power3.out',
         },
         0
       );
@@ -33,10 +35,10 @@ export const Hero = () => {
           opacity: 0,
           y: 20,
           duration: 0.6,
-          stagger: 0.03,
-          ease: 'power2.out',
+          stagger: 0.04,
+          ease: 'power3.out',
         },
-        0.3
+        0.2
       );
 
       // Animate bio
@@ -44,11 +46,11 @@ export const Hero = () => {
         bioElement,
         {
           opacity: 0,
-          y: 20,
+          y: 25,
           duration: 0.8,
-          ease: 'power2.out',
+          ease: 'power3.out',
         },
-        0.6
+        0.5
       );
 
       // Animate CTA buttons
@@ -58,12 +60,27 @@ export const Hero = () => {
           opacity: 0,
           y: 20,
           duration: 0.6,
-          stagger: 0.1,
-          ease: 'power2.out',
+          stagger: 0.12,
+          ease: 'power3.out',
         },
-        0.9
+        0.8
       );
     }, 100);
+
+    // Slow floating animation for badges
+    if (badgesRef.current) {
+      const badges = badgesRef.current.querySelectorAll('.floating-badge');
+      badges.forEach((badge, index) => {
+        gsap.to(badge, {
+          y: -20,
+          duration: 4 + index * 0.5, // Slow animation: 4-6 seconds
+          ease: 'sine.inOut',
+          repeat: -1,
+          yoyo: true,
+          delay: index * 0.3,
+        });
+      });
+    }
   }, []);
 
   const scrollToProjects = () => {
@@ -87,74 +104,80 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 flex items-center justify-center px-4 py-16 md:py-20 relative overflow-hidden">
-      {/* Floating skill badges - visible on desktop, hidden/repositioned on mobile */}
-      <div className="absolute top-20 md:top-32 left-2 md:left-10 glass px-3 md:px-4 py-2 rounded-lg text-xs md:text-base flex items-center gap-2 animate-bounce" style={{ animationDelay: '0s' }}>
-        <Code2 className="w-3 h-3 md:w-5 md:h-5 text-teal-400 flex-shrink-0" />
-        <span className="text-slate-300 hidden sm:inline">React & Node.js</span>
-        <span className="text-slate-300 sm:hidden">React</span>
+    <section className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 flex items-center justify-center px-4 py-12 md:py-16 relative overflow-hidden">
+      {/* Animated background gradient blobs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="absolute top-40 md:top-42 right-2 md:right-10 glass px-3 md:px-4 py-2 rounded-lg text-xs md:text-base flex items-center gap-2 animate-bounce" style={{ animationDelay: '0.5s' }}>
-        <Layers className="w-3 h-3 md:w-5 md:h-5 text-blue-400 flex-shrink-0" />
-        <span className="text-slate-300 hidden sm:inline">Angular 17+</span>
-        <span className="text-slate-300 sm:hidden">Angular</span>
+      {/* Floating skill badges - Repositioned for better mobile */}
+      <div ref={badgesRef} className="absolute inset-0 pointer-events-none">
+        {/* Hidden on mobile, visible on tablet+ */}
+        <div className="floating-badge hidden sm:block absolute top-16 left-4 md:left-8 lg:left-12">
+          <div className="glass px-3 md:px-4 py-2 rounded-lg text-xs md:text-sm flex items-center gap-2 backdrop-blur-md bg-white/5 border border-teal-500/30">
+            <Code2 className="w-4 h-4 text-teal-400 flex-shrink-0" />
+            <span className="text-slate-300 whitespace-nowrap">React</span>
+          </div>
+        </div>
+
+        <div className="floating-badge hidden md:block absolute top-40 right-6 lg:right-12">
+          <div className="glass px-4 py-2 rounded-lg text-sm flex items-center gap-2 backdrop-blur-md bg-white/5 border border-blue-500/30">
+            <Layers className="w-4 h-4 text-blue-400 flex-shrink-0" />
+            <span className="text-slate-300">Angular</span>
+          </div>
+        </div>
+
+        <div className="floating-badge hidden sm:block absolute bottom-40 left-6 md:left-8 lg:left-12">
+          <div className="glass px-3 md:px-4 py-2 rounded-lg text-xs md:text-sm flex items-center gap-2 backdrop-blur-md bg-white/5 border border-yellow-500/30">
+            <Database className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+            <span className="text-slate-300 whitespace-nowrap">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div className="floating-badge hidden lg:block absolute bottom-32 right-12">
+          <div className="glass px-4 py-2 rounded-lg text-sm flex items-center gap-2 backdrop-blur-md bg-white/5 border border-purple-500/30">
+            <Zap className="w-4 h-4 text-purple-400 flex-shrink-0" />
+            <span className="text-slate-300">AI & Node.js</span>
+          </div>
+        </div>
       </div>
 
-      <div className="absolute bottom-40 md:bottom-32 left-2 md:left-10 glass px-3 md:px-4 py-2 rounded-lg text-xs md:text-base flex items-center gap-2 animate-bounce" style={{ animationDelay: '1s' }}>
-        <Database className="w-3 h-3 md:w-5 md:h-5 text-yellow-400 flex-shrink-0" />
-        <span className="text-slate-300 hidden sm:inline">PostgreSQL</span>
-        <span className="text-slate-300 sm:hidden">SQL</span>
-      </div>
-
-      <div className="absolute bottom-32 md:bottom-40 right-2 md:right-10 glass px-3 md:px-4 py-2 rounded-lg text-xs md:text-base flex items-center gap-2 animate-bounce" style={{ animationDelay: '1.5s' }}>
-        <Zap className="w-3 h-3 md:w-5 md:h-5 text-purple-400 flex-shrink-0" />
-        <span className="text-slate-300 hidden sm:inline">AI Integration</span>
-        <span className="text-slate-300 sm:hidden">AI</span>
-      </div>
-
-      <div className="max-w-4xl mx-auto text-center z-10">
-        {/* Headline */}
-        <h1 className="headline text-4xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-6 leading-tight px-2">
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto text-center z-10 w-full">
+        {/* Headline - Responsive sizing */}
+        <h1 className="headline text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-3 md:mb-5 lg:mb-6 leading-tight px-2">
           {['Kottala', 'Samuel'].map((word, i) => (
-            <span key={i} className="inline-block mr-2 md:mr-3 text-white">
+            <span key={i} className="inline-block mr-1.5 sm:mr-2 md:mr-3 text-white">
               {word}
             </span>
           ))}
         </h1>
 
-        {/* Subheadline */}
-        <h2 className="subheadline text-sm sm:text-lg md:text-3xl font-light mb-6 md:mb-8 text-teal-400 px-2">
-          {[
-            'Data',
-            'Analyst',
-            '|',
-            'Full',
-            'Stack',
-            'Developer',
-            '|',
-            'AI',
-            'Systems',
-            'Engineer',
-          ].map((word, i) => (
-            <span key={i} className="inline-block mr-1.5 md:mr-2">
-              {word}
-            </span>
-          ))}
+        {/* Subheadline - Better mobile handling */}
+        <h2 className="subheadline text-xs sm:text-sm md:text-xl lg:text-3xl font-light mb-4 md:mb-6 lg:mb-8 text-teal-400 px-2 leading-relaxed">
+          {/* Mobile: Show abbreviated version */}
+          <span className="sm:hidden">
+            Data Analyst | Full Stack Developer | AI Engineer
+          </span>
+          {/* Tablet+: Show full version */}
+          <span className="hidden sm:inline">
+            Data Analyst | Full Stack Developer | AI Systems Engineer
+          </span>
         </h2>
 
-        {/* Bio */}
-        <p className="bio text-sm sm:text-base md:text-xl text-slate-300 max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed px-2">
-          Results-driven Developer (2+ YOE) delivering SaaS platforms via React, Angular & Node.js. Bridges software engineering with data analytics (SQL/BI) and AI automation to build intelligent enterprise dashboards.
+        {/* Bio - Cleaner and more concise */}
+        <p className="bio text-xs sm:text-sm md:text-base lg:text-lg text-slate-300 max-w-3xl mx-auto mb-6 md:mb-8 lg:mb-12 leading-relaxed px-2">
+          Results-driven Developer (2+ YOE) delivering React & Angular SaaS platforms. Bridges full-stack development with data analytics (SQL/BI) and AI automation to build intelligent enterprise dashboards.
         </p>
 
-        {/* Social Links */}
-        <div className="flex justify-center gap-3 md:gap-4 mb-8 md:mb-12">
+        {/* Social Links - Better spacing */}
+        <div className="flex justify-center gap-2 sm:gap-3 md:gap-4 mb-6 md:mb-8 lg:mb-12">
           <a
             href="https://github.com/Sam-096"
             target="_blank"
             rel="noopener noreferrer"
-            className="glass p-2 md:p-3 hover:bg-white/20 transition-all duration-300"
+            className="glass p-2 md:p-3 hover:bg-white/20 hover:border-white/40 transition-all duration-300"
             aria-label="GitHub"
           >
             <Github className="w-5 h-5 md:w-6 md:h-6 text-white" />
@@ -163,39 +186,39 @@ export const Hero = () => {
             href="https://linkedin.com/in/kottala-samuel"
             target="_blank"
             rel="noopener noreferrer"
-            className="glass p-2 md:p-3 hover:bg-white/20 transition-all duration-300"
+            className="glass p-2 md:p-3 hover:bg-white/20 hover:border-white/40 transition-all duration-300"
             aria-label="LinkedIn"
           >
             <Linkedin className="w-5 h-5 md:w-6 md:h-6 text-white" />
           </a>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center flex-wrap px-2">
+        {/* CTA Buttons - Optimized for all screen sizes */}
+        <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 justify-center flex-wrap px-2 mb-6">
           <button
             onClick={scrollToProjects}
-            className="cta-button group flex items-center justify-center gap-2 px-6 md:px-8 py-2.5 md:py-3 bg-teal-500 hover:bg-teal-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/50 text-sm md:text-base"
+            className="cta-button group flex items-center justify-center gap-1.5 sm:gap-2 px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 bg-teal-500 hover:bg-teal-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/50 text-xs sm:text-sm md:text-base"
           >
             View Projects
-            <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+            <ArrowDown className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-y-1 transition-transform" />
           </button>
 
           <a
             href="/resume.pdf"
             download="Kottala-Samuel-Resume.pdf"
             onClick={handleResumeClick}
-            className="cta-button flex items-center justify-center gap-2 px-6 md:px-8 py-2.5 md:py-3 glass hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 text-sm md:text-base"
+            className="cta-button flex items-center justify-center gap-1.5 sm:gap-2 px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 glass hover:bg-white/20 hover:border-white/40 text-white font-semibold rounded-lg transition-all duration-300 text-xs sm:text-sm md:text-base"
           >
-            <Download className="w-4 h-4" />
-            Download Resume
+            <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            Resume
           </a>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-teal-400 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-teal-400 rounded-full animate-pulse"></div>
+        {/* Scroll indicator - Mobile optimized */}
+        <div className="absolute bottom-3 sm:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-pulse">
+          <div className="w-5 h-8 sm:w-6 sm:h-10 border border-teal-400 rounded-full flex items-start justify-center p-1.5">
+            <div className="w-0.5 h-1.5 bg-teal-400 rounded-full"></div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,24 +1,24 @@
-/* Portfolio App Styles */
+/* Portfolio App Styles - Blacksmith Theme */
 
 /* Smooth animations globally */
 * {
   transition: colors 0.3s ease;
 }
 
-/* Ensure dark mode is applied */
+/* Ensure light mode */
 html {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'IBM Plex Sans', 'Droid Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0a0a0a;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 /* Utility classes */
@@ -29,78 +29,85 @@ body {
   -ms-user-select: none;
 }
 
-/* Modern card effect */
+/* Blacksmith dotted background patterns */
+.dotted-bg {
+  background-image: radial-gradient(circle, rgba(240, 251, 41, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dotted-bg-dense {
+  background-image: radial-gradient(circle, rgba(240, 251, 41, 0.15) 2px, transparent 2px);
+  background-size: 40px 40px;
+}
+
+/* Yellow accent highlight */
+.text-highlight {
+  color: #F0FB29;
+  font-weight: bold;
+}
+
+.bg-highlight {
+  background-color: #F0FB29;
+  color: #000000;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #F0FB29;
+  border: 2px solid #F0FB29;
+  color: #000000;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #000000;
+  color: #000000;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* Card styles */
 .card {
-  backdrop-filter: blur(8px);
-  background: rgba(26, 26, 26, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  padding: 24px;
+  transition: all 0.3s ease;
 }
 
-.card-dark {
-  backdrop-filter: blur(8px);
-  background: rgba(10, 10, 10, 0.6);
-  border: 1px solid rgba(124, 92, 255, 0.2);
-  border-radius: 0.5rem;
+.card:hover {
+  border-color: #F0FB29;
+  box-shadow: 0 8px 16px rgba(240, 251, 41, 0.1);
 }
 
-/* Glow effects for buttons and highlights */
-.glow-purple {
-  box-shadow: 0 0 20px rgba(124, 92, 255, 0.5);
+/* Section backgrounds */
+.section-light {
+  background-color: #FFFFFF;
 }
 
-.glow-purple-hover:hover {
-  box-shadow: 0 0 30px rgba(124, 92, 255, 0.6);
-  transition: box-shadow 0.3s ease;
+.section-dark {
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
-.glow-cyan {
-  box-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
-}
-
-.glow-cyan-hover:hover {
-  box-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
-  transition: box-shadow 0.3s ease;
-}
-
-.glow-orange {
-  box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
-}
-
-.glow-orange-hover:hover {
-  box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
-  transition: box-shadow 0.3s ease;
-}
-
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, #7c5cff 0%, #00d9ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Animated gradient background */
-.gradient-animate {
-  background: linear-gradient(
-    -45deg,
-    #7c5cff,
-    #00d9ff,
-    #ff6b35,
-    #1a1a1a
-  );
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.section-alt {
+  background-color: #F8F8F8;
 }

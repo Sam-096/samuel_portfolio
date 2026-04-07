@@ -1,91 +1,67 @@
-import { Mail, Github, Linkedin, ExternalLink } from "lucide-react";
+import { Mail, ArrowRight } from "lucide-react";
 
 export const Contact = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer
-      id="contact"
-      className="bg-dark-900 border-t border-purple-500/20 text-slate-300 py-20 md:py-24 px-4 md:px-8 lg:px-12"
-    >
-      <div className="max-w-7xl mx-auto">
-        {/* Main content */}
+    <footer id="contact" className="bg-bs-black border-t-4 border-bs-yellow text-white py-20 md:py-24 px-4 md:px-8">
+      <div className="max-w-6xl mx-auto">
+        {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mb-16 md:mb-20">
-          {/* Brand section */}
+          {/* Brand */}
           <div>
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Kottala Samuel
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Kottala <span className="text-bs-yellow">Samuel</span>
             </h3>
-            <p className="text-slate-400 text-sm md:text-base leading-relaxed">
-              Building intelligent, data-driven solutions through full-stack
-              development and AI integration.
+            <p className="text-gray-400 text-base leading-relaxed">
+              Building intelligent, data-driven solutions through full-stack development and AI integration.
             </p>
           </div>
 
-          {/* Quick links */}
+          {/* Quick Links */}
           <div>
-            <h4 className="text-lg md:text-xl font-semibold text-white mb-5">
-              Quick Links
-            </h4>
-            <ul className="space-y-3 text-sm md:text-base">
+            <h4 className="text-xl font-bold text-white mb-6 uppercase tracking-widest">Links</h4>
+            <ul className="space-y-4">
               <li>
-                <a
-                  href="#projects"
-                  className="text-slate-400 hover:text-purple-400 transition-colors flex items-center gap-2 group"
-                >
-                  <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <a href="#projects" className="text-gray-400 hover:text-bs-yellow transition-colors flex items-center gap-2 group font-semibold">
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   Projects
                 </a>
               </li>
               <li>
-                <a
-                  href="https://github.com/Sam-096"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-purple-400 transition-colors flex items-center gap-2 group"
-                >
-                  <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                <a href="https://github.com/Sam-096" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-bs-yellow transition-colors flex items-center gap-2 group font-semibold">
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   GitHub
                 </a>
               </li>
               <li>
-                <a
-                  href="https://linkedin.com/in/kottala-samuel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-purple-400 transition-colors flex items-center gap-2 group"
-                >
-                  <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                <a href="https://linkedin.com/in/kottala-samuel" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-bs-yellow transition-colors flex items-center gap-2 group font-semibold">
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   LinkedIn
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact section */}
+          {/* Contact CTA */}
           <div>
-            <h4 className="text-lg md:text-xl font-semibold text-white mb-5">
-              Get In Touch
-            </h4>
+            <h4 className="text-xl font-bold text-white mb-6 uppercase tracking-widest">Get In Touch</h4>
             <a
               href="mailto:kottala.samuel@gmail.com"
-              className="inline-flex items-center gap-2 px-4 md:px-5 py-2.5 md:py-3 bg-purple-500/20 hover:bg-purple-500/40 text-purple-300 hover:text-purple-200 border border-purple-500/40 hover:border-purple-500/70 rounded-lg transition-all duration-300 text-sm md:text-base font-semibold"
+              className="inline-flex items-center gap-3 px-6 py-4 bg-bs-yellow text-bs-black font-bold rounded-lg hover:opacity-90 transition-all duration-300 group text-base"
             >
-              <Mail className="w-4 h-4" />
-              Email me
+              <Mail className="w-5 h-5" />
+              Email Me
             </a>
-            <p className="text-slate-500 text-xs md:text-sm mt-4">
-              Available for full-time, freelance, or contract work
-            </p>
+            <p className="text-gray-500 text-sm mt-4 font-semibold">Available for full-time, freelance, or contract work</p>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="border-t border-purple-500/20 pt-8 md:pt-12">
-          {/* Bottom info */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs md:text-sm text-slate-500">
+        <div className="border-t-2 border-gray-700 pt-8 md:pt-12">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-gray-500 font-semibold">
             <p>© {currentYear} Kottala Samuel. All rights reserved.</p>
-            <p>Designed & built with React, TypeScript, Tailwind CSS & GSAP</p>
+            <p>Designed with bold vision • Built with React, TypeScript & Tailwind</p>
           </div>
         </div>
       </div>

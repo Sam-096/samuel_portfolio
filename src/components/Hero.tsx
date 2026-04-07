@@ -43,19 +43,19 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-white dotted-bg-dense flex items-center justify-center px-4 py-24 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto text-center z-10 w-full">
+    <section className="min-h-screen bg-white dotted-bg-dense flex items-center justify-center px-4 py-20 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto text-center z-10 w-full">
         {/* Headline with colored accent */}
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-bs-black mb-8 md:mb-10 leading-tight max-w-5xl mx-auto">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-bs-black mb-6 md:mb-8 leading-tight max-w-5xl mx-auto">
           Full Stack Developer &amp;{' '}
           <span className="text-bs-yellow">AI Systems</span>{' '}
           Engineer
         </h1>
 
         {/* Subheadline with typewriter effect */}
-        <div className="mb-14 md:mb-20 min-h-20 md:min-h-24 flex items-center justify-center">
-          <div className="text-3xl md:text-5xl font-bold text-bs-black">
-            <span ref={typewriterRef} className="border-r-4 border-bs-yellow pr-3 inline-block">
+        <div className="mb-12 md:mb-16 min-h-16 md:min-h-20 flex items-center justify-center">
+          <div className="text-2xl md:text-4xl font-black text-bs-black">
+            <span ref={typewriterRef} className="border-r-4 border-bs-yellow pr-2 inline-block whitespace-nowrap">
               Building next-gen data systems
             </span>
             <span ref={cursorRef} className="text-bs-yellow animate-blink ml-1">|</span>
@@ -71,16 +71,16 @@ export const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-5 justify-center mb-20 md:mb-28">
           <button
             onClick={scrollToProjects}
-            className="group flex items-center justify-center gap-3 px-10 md:px-14 py-5 md:py-6 bg-bs-yellow text-bs-black font-black rounded-xl hover:shadow-2xl transition-all duration-300 text-lg md:text-2xl hover:-translate-y-1"
+            className="group flex items-center justify-center gap-3 px-10 md:px-14 py-5 md:py-6 bg-bs-yellow text-bs-black font-black rounded-xl hover:shadow-2xl hover:shadow-bs-yellow/50 transition-all duration-300 text-lg md:text-2xl hover:-translate-y-2 hover:scale-105"
           >
             View My Work
-            <ArrowRight className="w-6 h-6 md:w-7 md:h-7 group-hover:translate-x-2 transition-transform" />
+            <ArrowRight className="w-6 h-6 md:w-7 md:h-7 group-hover:translate-x-3 transition-transform" />
           </button>
           <a
             href="https://github.com/Sam-096"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 px-10 md:px-14 py-5 md:py-6 border-3 border-bs-black text-bs-black font-black rounded-xl hover:bg-bs-black hover:text-white transition-all duration-300 text-lg md:text-2xl hover:-translate-y-1"
+            className="flex items-center justify-center gap-3 px-10 md:px-14 py-5 md:py-6 border-3 border-bs-black text-bs-black font-black rounded-xl hover:bg-bs-black hover:text-white transition-all duration-300 text-lg md:text-2xl hover:-translate-y-2 hover:shadow-2xl hover:scale-105"
           >
             GitHub Profile
             <Github className="w-6 h-6 md:w-7 md:h-7" />

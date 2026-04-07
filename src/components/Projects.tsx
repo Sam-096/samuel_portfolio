@@ -28,7 +28,7 @@ export const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="project-card group border-3 border-bs-black p-8 md:p-10 rounded-xl hover:border-bs-yellow hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 flex flex-col h-full"
+              className="project-card group border-4 border-bs-black p-8 md:p-10 rounded-xl hover:border-bs-yellow hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 flex flex-col h-full"
             >
               {/* Project Image */}
               <div className="relative h-64 md:h-72 rounded-lg overflow-hidden mb-8 bg-gray-200">
@@ -74,7 +74,7 @@ export const Projects = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-4 pt-8 border-t-2 border-bs-black">
+              <div className="flex gap-4 pt-8 border-t-3 border-bs-black">
                 {project.liveLink && (
                   <a
                     href={project.liveLink}

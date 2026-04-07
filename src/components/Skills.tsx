@@ -27,7 +27,7 @@ export const Skills = () => {
           {skillCategories.map((category) => (
             <div
               key={category.id}
-              className="skill-card border-3 border-gray-700 hover:border-bs-yellow p-8 md:p-10 rounded-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-3"
+              className="skill-card border-4 border-gray-700 hover:border-bs-yellow p-8 md:p-10 rounded-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-3"
             >
               {/* Category title */}
               <h3 className="text-2xl md:text-3xl font-black text-white mb-8 group-hover:text-bs-yellow transition-colors">

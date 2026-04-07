@@ -23,7 +23,7 @@ export const useGSAPScroll = () => {
   }, []);
 
   /**
-   * Animate elements with fade-up on scroll
+   * Animate elements with fade-up on scroll - ensures visibility
    */
   const fadeUpOnScroll = (selector: string, stagger = 0.1) => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -34,6 +34,9 @@ export const useGSAPScroll = () => {
     if (elements.length === 0) return;
 
     elements.forEach((element, index) => {
+      // Ensure element is visible by default
+      (element as HTMLElement).style.opacity = '1';
+
       gsap.from(element, {
         scrollTrigger: {
           trigger: element,
@@ -41,12 +44,16 @@ export const useGSAPScroll = () => {
           end: 'top 70%',
           scrub: false,
           markers: false,
+          onEnter: () => {
+            (element as HTMLElement).style.opacity = '1';
+          },
         },
         opacity: 0,
         y: 30,
         duration: 0.8,
         delay: index * stagger,
         ease: 'power2.out',
+        overwrite: 'auto', // Prevent conflicting animations
       });
     });
   };

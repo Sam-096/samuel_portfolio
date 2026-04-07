@@ -30,12 +30,20 @@ export const Projects = () => {
               key={project.id}
               className="project-card group border-3 border-bs-black p-8 md:p-10 rounded-xl hover:border-bs-yellow hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full"
             >
-              {/* Project Image - Reduced size */}
-              <div className="relative h-56 md:h-64 rounded-lg overflow-hidden mb-8 bg-gray-200">
+              {/* Project Image - Reduced size with visible fallback */}
+              <div className="relative h-56 md:h-64 rounded-lg overflow-hidden mb-8 bg-gray-300 flex items-center justify-center">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  onError={(e) => {
+                    // Fallback for missing images
+                    (e.target as HTMLImageElement).style.display = 'none';
+                    const parent = (e.target as HTMLImageElement).parentElement;
+                    if (parent) {
+                      parent.innerHTML = `<div class="flex items-center justify-center w-full h-full bg-gradient-to-br from-gray-300 to-gray-400"><span class="text-gray-600 font-semibold">${project.title}</span></div>`;
+                    }
+                  }}
                 />
               </div>
 

@@ -8,15 +8,13 @@ import './App.css';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white overflow-x-hidden">
+    <div className="overflow-x-hidden">
       <Navbar />
-      <div className="pt-16">
-        <Hero />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Contact />
-      </div>
+      <Hero />
+      <Projects />
+      <Skills />
+      <Experience />
+      <Contact />
     </div>
   );
 }

@@ -21,35 +21,35 @@ export const Navbar = () => {
   };
 
   const navItems = [
-    { label: "Projects", id: "projects" },
-    { label: "Skills", id: "skills" },
-    { label: "Experience", id: "experience" },
+    { label: "PROJECTS", id: "projects" },
+    { label: "SKILLS", id: "skills" },
+    { label: "EXPERIENCE", id: "experience" },
   ];
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 border-b-2 border-black ${
         isScrolled
-          ? "bg-dark-950/95 backdrop-blur-md border-b border-zinc-800"
-          : "bg-dark-950 border-b border-zinc-900"
+          ? "bg-white"
+          : "bg-white"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-xl md:text-2xl font-bold text-white hover:text-zinc-300 transition-colors"
+          className="text-xl md:text-2xl font-black text-black border-2 border-black px-3 py-1 hover:bg-black hover:text-neon-yellow transition-all uppercase"
         >
           KS
         </button>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-12">
+        <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-sm font-medium text-zinc-400 hover:text-white transition-colors"
+              className="text-sm font-black text-black border-b-2 border-transparent hover:border-black transition-all uppercase"
             >
               {item.label}
             </button>
@@ -59,7 +59,7 @@ export const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white hover:text-zinc-300 transition-colors"
+          className="md:hidden text-black border-2 border-black p-2 hover:bg-black hover:text-neon-yellow transition-all"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -67,13 +67,13 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-dark-950 border-b border-zinc-800">
+        <div className="md:hidden bg-white border-t-2 border-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-left text-zinc-400 hover:text-white font-medium text-lg transition-colors"
+                className="text-left text-black font-black text-lg border-l-2 border-black pl-4 hover:text-neon-yellow transition-colors uppercase"
               >
                 {item.label}
               </button>

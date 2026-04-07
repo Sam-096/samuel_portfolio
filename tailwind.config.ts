@@ -9,23 +9,12 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        pixel: ['Press Start 2P', 'VT323', 'monospace'],
         mono: ['Inter', 'monospace'],
       },
       colors: {
-        // Monochromatic premium dark theme
-        'dark': {
-          50: '#f8f8f8',
-          100: '#f0f0f0',
-          200: '#e5e5e5',
-          300: '#d4d4d4',
-          400: '#a1a1a1',
-          500: '#737373',
-          600: '#525252',
-          700: '#404040',
-          800: '#262626',
-          900: '#171717',
-          950: '#050505',
-        },
+        // Brutalist palette - stark and harsh
+        'neon-yellow': '#e4ff00',
       },
       spacing: {
         '128': '32rem',
@@ -37,8 +26,8 @@ export default {
         wide: '0.025em',
       },
       animation: {
-        'fade-in': 'fadeIn 0.6s ease-out',
-        'slide-up': 'slideUp 0.5s ease-out',
+        'fade-in': 'fadeIn 0.4s ease-out',
+        'slide-up': 'slideUp 0.4s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -49,6 +38,9 @@ export default {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+      },
+      borderRadius: {
+        none: '0px',
       },
     },
   },

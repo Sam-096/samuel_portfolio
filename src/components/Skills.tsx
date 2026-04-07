@@ -10,27 +10,29 @@ export const Skills = () => {
   }, [fadeUpOnScroll]);
 
   return (
-    <section id="skills" className="py-28 md:py-40 px-4 sm:px-6 lg:px-8 bg-dark-950">
+    <section id="skills" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-neon-yellow border-b-2 border-black">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="mb-20">
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-4 tracking-tight">
-            Technical Skills
+        <div className="mb-20 border-2 border-black p-8 bg-black">
+          <h2 className="text-5xl md:text-7xl font-black text-neon-yellow mb-4 tracking-tight uppercase">
+            TECHNICAL SKILLS
           </h2>
-          <p className="text-lg text-zinc-400 max-w-3xl">
-            Proficient in 80+ technologies across data platforms, full-stack development, and AI systems.
+          <p className="text-lg text-neon-yellow font-bold">
+            80+ Technologies. Always shipping. Always learning.
           </p>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+          {skillCategories.map((category, idx) => (
             <div
               key={category.id}
-              className="skill-card card p-6 md:p-8 hover:shadow-xl hover:shadow-white/5 transition-all duration-300"
+              className={`skill-card border-2 border-black p-6 md:p-8 bg-white hover:bg-black transition-all duration-200 ${
+                idx % 2 === 0 ? 'md:border-r-0' : ''
+              } ${idx < 3 ? 'md:border-b-0 lg:border-b-2' : ''}`}
             >
               {/* Category Title */}
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-6 border-b border-zinc-800 pb-4">
+              <h3 className="text-xl md:text-2xl font-black text-black mb-6 uppercase border-b-2 border-black pb-4 hover:text-neon-yellow transition-colors">
                 {category.name}
               </h3>
 
@@ -38,8 +40,8 @@ export const Skills = () => {
               <div className="space-y-3">
                 {category.skills.map((skill, index) => (
                   <div key={index} className="flex items-center gap-3 group">
-                    <span className="w-1.5 h-1.5 bg-white rounded-full flex-shrink-0 group-hover:scale-150 transition-transform"></span>
-                    <span className="text-sm md:text-base text-zinc-300 group-hover:text-white transition-colors">
+                    <span className="w-2 h-2 bg-black flex-shrink-0 group-hover:bg-neon-yellow transition-colors"></span>
+                    <span className="text-sm md:text-base text-black font-semibold group-hover:font-black transition-all group-hover:text-neon-yellow">
                       {skill.name}
                     </span>
                   </div>

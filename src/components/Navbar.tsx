@@ -38,7 +38,7 @@ export const Navbar = () => {
         {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-xl md:text-2xl font-black text-black border-2 border-black px-3 py-1 hover:bg-black hover:text-neon-yellow transition-all uppercase"
+          className="text-xl md:text-2xl font-black text-black border-2 border-black px-3 py-1 hover:bg-black hover:text-[#e4ff00] transition-all uppercase"
         >
           KS
         </button>

@@ -8,12 +8,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['"IBM Plex Sans"', 'Droid Sans', 'system-ui', 'sans-serif'],
         pixel: ['"Press Start 2P"', 'monospace'],
         hero: ['"Press Start 2P"', 'monospace'],
-        display: ['Orbitron', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
+        display: ['"IBM Plex Sans"', 'Droid Sans', 'sans-serif'],
+        body: ['"IBM Plex Sans"', 'Droid Sans', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
       },
       colors: {
         // Brutalist palette - stark and harsh

@@ -34,7 +34,7 @@ export const projects: Project[] = [
   },
   {
     id: "2",
-    title: "Full Stack Analytics Applciation",
+    title: "Full Stack Applciation",
     description:
       "Extracted raw exam datasets into a structured MySQL database with a Node.js API calculating live KPIs.",
     image: "/assets/projects/eamcet.png",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     liveLink: "https://svgroups.netlify.app",
     githubLink: "https://github.com/Sam-096/eapcet_backend",
     highlights: [
-      "1.2MB dataset transformation",
+      "RAW dataset transformation",
       "Live KPI calculation",
       "10K+ student records indexed",
     ],
@@ -50,7 +50,7 @@ export const projects: Project[] = [
   },
   {
     id: "3",
-    title: "ALX Books (GST Accounting SaaS)",
+    title: "QUICKATHA (GST Accounting SaaS)",
     description:
       "Developed high-performance financial dashboards and data-driven UI systems for a GST-compliant accounting SaaS, enabling real-time ledger visibility and audit-log tracking for finance workflows.",
     image: "/assets/projects/alx-books.png",

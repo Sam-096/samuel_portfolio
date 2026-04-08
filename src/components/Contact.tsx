@@ -80,7 +80,10 @@ export const Contact = () => {
         <div className="border-t-2 border-[#e4ff00] pt-8 md:pt-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-xs md:text-sm text-[#e4ff00] font-bold uppercase">
             <p>© {currentYear} KOTTALA SAMUEL. ALL RIGHTS RESERVED.</p>
-            <p>OPEN FOR WORK • FULL TIME • PARTIME • CONTRACT</p>
+            <p>
+              <span className="text-[#ffffff]">OPEN FOR WORK</span> • FULL-TIME
+              • FREELANCE • CONTRACT
+            </p>
           </div>
         </div>
       </div>

@@ -59,7 +59,7 @@ export const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-black border-2 border-black p-2 hover:bg-black hover:text-neon-yellow transition-all"
+          className="md:hidden text-black border-2 border-black p-2 hover:bg-black hover:text-[#e4ff00] transition-all"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -73,7 +73,7 @@ export const Navbar = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-left text-black font-black text-lg border-l-2 border-black pl-4 hover:text-neon-yellow transition-colors uppercase"
+                className="text-left text-black font-black text-lg border-l-2 border-black pl-4 hover:text-[#e4ff00] transition-colors uppercase"
               >
                 {item.label}
               </button>

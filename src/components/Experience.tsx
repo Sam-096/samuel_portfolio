@@ -17,7 +17,7 @@ export const Experience = () => {
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
         <div className="mb-20 border-2 border-black p-8 bg-[#e4ff00]">
-          <h2 className="text-5xl md:text-7xl font-black text-black mb-4 tracking-tight uppercase">
+          <h2 className="font-display text-4xl md:text-5xl font-black text-black mb-4 tracking-tight uppercase">
             CAREER
           </h2>
           <p className="text-lg text-black font-bold">

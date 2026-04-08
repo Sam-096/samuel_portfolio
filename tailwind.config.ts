@@ -9,8 +9,11 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        pixel: ['Press Start 2P', 'VT323', 'monospace'],
-        mono: ['Inter', 'monospace'],
+        pixel: ['"Press Start 2P"', 'monospace'],
+        hero: ['"Press Start 2P"', 'monospace'],
+        display: ['Orbitron', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
       colors: {
         // Brutalist palette - stark and harsh
@@ -22,6 +25,7 @@ export default {
         '144': '36rem',
       },
       letterSpacing: {
+        tightest: '-0.05em',
         tight: '-0.02em',
         normal: '0em',
         wide: '0.025em',

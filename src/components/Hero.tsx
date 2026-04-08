@@ -10,19 +10,19 @@ export const Hero = () => {
     <section className="min-h-screen bg-[#e4ff00] border-b-2 border-black grid-pattern flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 relative">
       <div className="max-w-7xl mx-auto text-center z-10 w-full">
         {/* Pixelated Headline */}
-        <h1 className="font-pixel text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black mb-8 leading-tight tracking-tight transform hover:scale-105 transition-transform">
+        <h1 className="font-hero text-5xl sm:text-6xl md:text-8xl lg:text-9xl text-black mb-8 leading-tight tracking-tightest transform hover:scale-105 transition-transform">
           KOTTALA
           <br />
           SAMUEL
         </h1>
 
         {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto mb-6 leading-tight font-bold">
+        <p className="font-display text-3xl md:text-4xl text-black max-w-3xl mx-auto mb-6 leading-tight font-bold">
           Full Stack Developer • Data Analyst • AI Systems Engineer
         </p>
 
         {/* Bio */}
-        <p className="text-base md:text-lg text-black max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="font-body text-lg md:text-xl text-black max-w-3xl mx-auto mb-12 leading-relaxed">
           Results-driven Developer (3 YOE) delivering SaaS platforms via React,
           Angular & Node.js. Bridges software engineering with data analytics
           (SQL/BI) and AI automation to build intelligent, workflow-driven

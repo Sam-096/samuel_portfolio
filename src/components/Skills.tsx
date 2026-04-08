@@ -121,7 +121,7 @@ export const Skills = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-20 border-2 border-black p-8 bg-black">
-          <h2 className="text-5xl md:text-7xl font-black text-[#e4ff00] mb-4 tracking-tight uppercase">
+          <h2 className="font-display text-4xl md:text-5xl font-black text-[#e4ff00] mb-4 tracking-tight uppercase">
             TECHNICAL SKILLS
           </h2>
           <p className="text-lg text-[#e4ff00] font-bold">
@@ -153,7 +153,7 @@ export const Skills = () => {
               >
                 {/* Category Title */}
                 <h3
-                  className={`text-xl md:text-2xl font-black mb-6 uppercase border-b-2 pb-4 flex items-center gap-2 transition-colors duration-200
+                  className={`font-display text-xl md:text-2xl font-black mb-6 uppercase border-b-2 pb-4 flex items-center gap-2 transition-colors duration-200
                     ${isBlackCard
                       ? "text-[#e4ff00] border-[#e4ff00] group-hover:text-[#e4ff00] group-hover:border-[#e4ff00]"
                       : "text-black border-black group-hover:text-[#e4ff00] group-hover:border-[#e4ff00]"
@@ -192,7 +192,7 @@ export const Skills = () => {
                           />
                         )}
                         <span
-                          className={`text-sm md:text-base font-semibold transition-colors duration-200 ${textClass}`}
+                          className={`font-mono text-sm uppercase tracking-wider font-semibold transition-colors duration-200 ${textClass}`}
                         >
                           {skill.name}
                         </span>

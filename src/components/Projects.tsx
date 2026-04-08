@@ -18,7 +18,7 @@ export const Projects = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-20 border-2 border-black p-8 bg-[#e4ff00]">
-          <h2 className="text-5xl md:text-7xl font-black text-black mb-4 tracking-tight">
+          <h2 className="font-display text-4xl md:text-5xl font-black text-black mb-4 tracking-tight uppercase">
             FEATURED PROJECTS
           </h2>
           <p className="text-lg text-black font-bold">
@@ -52,7 +52,7 @@ export const Projects = () => {
               </div>
 
               {/* Project Title */}
-              <h3 className="text-xl md:text-2xl font-black text-black mb-3 uppercase">
+              <h3 className="font-display text-xl md:text-2xl font-black text-black mb-3 uppercase">
                 {project.title}
                 <div className="flex flex-wrap gap-2">
                   {project.status && (

@@ -1,8 +1,102 @@
 import { useEffect } from "react";
 import { projects } from "../data/projects";
 import { useGSAPScroll } from "../hooks/useGSAPScroll";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, BarChart3, Brain, Database, Server, Lock, Layers } from "lucide-react";
+import {
+  SiAngular, SiReact, SiPostgresql, SiMysql, SiNodedotjs,
+  SiTypescript, SiJavascript, SiPython, SiTailwindcss,
+  SiHuggingface, SiAnthropic,
+} from "react-icons/si";
 
+// ─── Tech → icon map used in project thumbnails ───────────────────────────────
+type IconComp = React.ComponentType<{ size?: number; className?: string }>;
+
+const techIconMap: Record<string, IconComp> = {
+  "Angular 21":     SiAngular,
+  "Angular":        SiAngular,
+  "React":          SiReact,
+  "PostgreSQL":     SiPostgresql,
+  "MySQL":          SiMysql,
+  "Node.js":        SiNodedotjs,
+  "TypeScript":     SiTypescript,
+  "JavaScript":     SiJavascript,
+  "Python":         SiPython,
+  "Tailwind CSS":   SiTailwindcss,
+  "Hugging Face":   SiHuggingface,
+  "DistilBERT":     Brain,
+  "Claude API":     SiAnthropic,
+  "Anthropic MCP":  SiAnthropic,
+  "scikit-learn":   Brain,
+  "SQL":            SiPostgresql,
+  "Recharts":       BarChart3,
+  "REST APIs":      Server,
+  "JWT Auth":       Lock,
+  "RAG":            Layers,
+  "Java":           Database,
+  "shadcn/ui":      SiReact,
+};
+
+// Pick up to 4 icons for the stack, de-duplicating icon components
+function getStackIcons(stack: string[]): { name: string; Icon: IconComp }[] {
+  const seen = new Set<IconComp>();
+  const result: { name: string; Icon: IconComp }[] = [];
+  for (const tech of stack) {
+    const Icon = techIconMap[tech];
+    if (Icon && !seen.has(Icon)) {
+      seen.add(Icon);
+      result.push({ name: tech, Icon });
+    }
+    if (result.length === 4) break;
+  }
+  return result;
+}
+
+// ─── Gradient thumbnail with tech icons ──────────────────────────────────────
+const ProjectThumbnail = ({ project }: { project: typeof projects[0] }) => {
+  const icons = getStackIcons(project.stack);
+
+  return (
+    <div
+      className="relative h-48 md:h-56 border-2 border-black overflow-hidden mb-6 flex items-center justify-center"
+      style={{ background: "linear-gradient(135deg, #78ff96 0%, #e4ff00 100%)" }}
+    >
+      {/* Actual screenshot — shown if it loads */}
+      <img
+        src={project.image}
+        alt={project.title}
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        onError={(e) => {
+          (e.target as HTMLImageElement).style.display = "none";
+        }}
+      />
+
+      {/* Icon grid — always rendered, visible when image fails/is absent */}
+      <div className="relative z-10 flex flex-wrap items-center justify-center gap-4 px-6">
+        {icons.map(({ name, Icon }) => (
+          <div key={name} className="flex flex-col items-center gap-1">
+            <div className="w-12 h-12 bg-black flex items-center justify-center border-2 border-black">
+              <Icon size={24} className="text-[#e4ff00]" />
+            </div>
+            <span className="text-[10px] font-black text-black uppercase tracking-wider max-w-[52px] text-center leading-tight">
+              {name}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      {/* Subtle grid overlay for Blacksmith texture */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "radial-gradient(circle, rgba(0,0,0,0.08) 1px, transparent 1px)",
+          backgroundSize: "14px 14px",
+        }}
+      />
+    </div>
+  );
+};
+
+// ─── Main component ───────────────────────────────────────────────────────────
 export const Projects = () => {
   const { fadeUpOnScroll } = useGSAPScroll();
 
@@ -35,26 +129,13 @@ export const Projects = () => {
                 idx % 2 === 0 ? "md:border-r-0" : ""
               } ${idx < 3 ? "md:border-b-0 lg:border-b-2" : ""}`}
             >
-              {/* Project Image */}
-              <div className="relative h-48 md:h-56 border-2 border-black overflow-hidden mb-6 bg-black flex items-center justify-center hover:bg-[#e4ff00] transition-colors">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = "none";
-                    const parent = (e.target as HTMLImageElement).parentElement;
-                    if (parent) {
-                      parent.innerHTML = `<div class="flex items-center justify-center w-full h-full bg-black text-[#e4ff00] font-black text-center px-4 text-sm">${project.title}</div>`;
-                    }
-                  }}
-                />
-              </div>
+              {/* Gradient thumbnail with tech icons */}
+              <ProjectThumbnail project={project} />
 
-              {/* Project Title */}
+              {/* Project Title + Status */}
               <h3 className="font-display text-xl md:text-2xl font-black text-black mb-3 uppercase">
                 {project.title}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-2">
                   {project.status && (
                     <span className="text-xs px-3 py-2 border-2 border-black font-bold uppercase transition-all bg-[#e4ff00] text-black hover:bg-black hover:text-[#e4ff00]">
                       {project.status}
@@ -79,11 +160,9 @@ export const Projects = () => {
                 </ul>
               )}
 
-              {/* Tech Stack */}
+              {/* Tech Stack tags */}
               <div className="mb-6 border-t-2 border-black pt-4">
-                <p className="text-xs font-black text-black uppercase tracking-wider mb-3">
-                  STACK
-                </p>
+                <p className="text-xs font-black text-black uppercase tracking-wider mb-3">STACK</p>
                 <div className="flex flex-wrap gap-2">
                   {project.stack.slice(0, 4).map((tech, i) => (
                     <span
@@ -134,11 +213,9 @@ export const Projects = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
+        {/* CTA */}
         <div className="mt-20 p-8 border-2 border-black bg-black text-center">
-          <p className="text-[#e4ff00] font-black text-lg mb-6 uppercase">
-            WANT MORE?
-          </p>
+          <p className="text-[#e4ff00] font-black text-lg mb-6 uppercase">WANT MORE?</p>
           <a
             href="https://github.com/Sam-096"
             target="_blank"

@@ -72,7 +72,7 @@ export const Contact = () => {
                 EMAIL
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/9652308330"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3 bg-black text-[#e4ff00] font-black border-2 border-black hover:bg-[#e4ff00] hover:text-black transition-all text-sm uppercase"

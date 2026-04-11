@@ -30,7 +30,7 @@ export const Hero = () => {
         </p>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto mb-14 border-2 border-black p-8 bg-white">
+        <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-2xl mx-auto mb-14 border-2 border-black p-8 bg-white">
           <div className="border-r-2 border-black pr-4">
             <p className="text-4xl md:text-5xl font-black text-black">3</p>
             <p className="text-sm md:text-base text-black mt-2 font-bold">
@@ -43,12 +43,12 @@ export const Hero = () => {
               PROJECTS
             </p>
           </div>
-          <div>
+          {/* <div>
             <p className="text-4xl md:text-5xl font-black text-black">7</p>
             <p className="text-sm md:text-base text-black mt-2 font-bold">
               Happy Client
             </p>
-          </div>
+          </div> */}
         </div>
 
         {/* CTA Buttons */}

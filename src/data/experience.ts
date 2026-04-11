@@ -21,12 +21,12 @@ export const experiences: Experience[] = [
     description:
       "Engineered real-time SQL-to-LLM data injection pipelines, PostgreSQL warehouse databases, and GST financial dashboards.",
     responsibilities: [
-      "Built real-time data injection pipelines from PostgreSQL to LLMs",
+      "Built PromptContextService pipeline injecting live PostgreSQL warehouse KPIs into LLM prompts — eliminating AI hallucinations with grounded operational data",
       "Designed and optimized warehouse databases for large-scale analytics",
       "Developed GST financial dashboards with real-time KPI tracking",
       "Implemented data validation and error handling systems",
     ],
-    technologies: ["PostgreSQL", "Node.js", "React", "Python", "Claude API"],
+    technologies: ["Angular 21", "Node.js", "React", "SQL", "AI Models"],
   },
   {
     id: "2",

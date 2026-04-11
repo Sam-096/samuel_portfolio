@@ -49,7 +49,7 @@ Group the skills into modern, hovering glassmorphic cards. **CRITICAL:** Include
 - **Languages:** Python (Pandas, NumPy), JavaScript, TypeScript.
 - **Backend & Automation:** Node.js, Spring Boot, Redis, GitHub Actions.
 - **AI & Integrations:** Claude API, Anthropic MCP (Model Context Protocol), DistilBERT, Groq, Sarvam.
-- **Frontend & Cloud:** React, Angular 17+, Tailwind CSS, Render, Netlify.
+- **Frontend & Cloud:** React, Angular 21, Tailwind CSS, Render, Netlify.
 
 ### D. Projects Section (The Core Focus)
 

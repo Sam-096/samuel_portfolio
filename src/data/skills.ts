@@ -36,6 +36,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "HTML5", icon: "Code", color: "#e34f26" },
       { name: "CSS3", icon: "Palette", color: "#1572b6" },
       { name: "GSAP", icon: "Wand2", color: "#0ae448" },
+      { name: "Recharts", icon: "BarChart3", color: "#8884d8" },
     ],
   },
   {
@@ -46,8 +47,11 @@ export const skillCategories: SkillCategory[] = [
       { name: "Node.js", icon: "Server", color: "#339933" },
       { name: "Express.js", icon: "Server", color: "#000000" },
       { name: "Flask", icon: "Server", color: "#000000" },
-      { name: "REST APIs", icon: "Network", color: "#000000" },
       { name: "Spring Boot", icon: "Server", color: "#6db33f" },
+      { name: "REST APIs", icon: "Network", color: "#000000" },
+      { name: "JWT Auth", icon: "Lock", color: "#000000" },
+      { name: "Redis", icon: "Database", color: "#dc382d" },
+      { name: "Sequelize ORM", icon: "Database", color: "#52b0e7" },
     ],
   },
   {
@@ -74,6 +78,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "GitHub", icon: "GitBranch", color: "#181717" },
       { name: "Netlify", icon: "Cloud", color: "#00c46a" },
       { name: "Render", icon: "Cloud", color: "#000000" },
+      { name: "Hugging Face", icon: "Brain", color: "#ff9d00" },
       { name: "Swagger", icon: "FileText", color: "#85ea2d" },
       { name: "cPanel", icon: "Settings", color: "#ff6c2c" },
     ],
@@ -95,9 +100,14 @@ export const skillCategories: SkillCategory[] = [
     icon: "Sparkles",
     skills: [
       { name: "Claude API", icon: "Sparkles", color: "#000000" },
-      { name: "LLM Integration", icon: "Zap", color: "#000000" },
+      { name: "Anthropic MCP", icon: "Sparkles", color: "#000000" },
+      { name: "Prompt Engineering", icon: "Brain", color: "#000000" },
+      { name: "Sarvam AI", icon: "Zap", color: "#5c2d91" },
+      { name: "Ollama", icon: "Brain", color: "#000000" },
+      { name: "Groq", icon: "Zap", color: "#f55036" },
       { name: "DistilBERT", icon: "Brain", color: "#000000" },
-      { name: "Anthropic MCP", icon: "Zap", color: "#000000" },
+      { name: "Sentence Transformers", icon: "Brain", color: "#000000" },
+      { name: "RAG", icon: "Layers", color: "#000000" },
     ],
   },
   {
@@ -110,6 +120,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Responsive UI", icon: "Smartphone", color: "#000000" },
       { name: "Lazy Loading", icon: "Zap", color: "#000000" },
       { name: "State Management", icon: "Layers", color: "#000000" },
+      { name: "Claude Code Certified", icon: "Sparkles", color: "#e4ff00" },
     ],
   },
 ];

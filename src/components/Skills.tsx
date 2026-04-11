@@ -21,6 +21,7 @@ import {
   CheckSquare,
   Smartphone,
   Layers,
+  Lock,
 } from "lucide-react";
 import {
   SiJavascript,
@@ -49,6 +50,8 @@ import {
   SiRender,
   SiGit,
   SiAnthropic,
+  SiRedis,
+  SiHuggingface,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 import type { LucideIcon } from "lucide-react";
@@ -175,12 +178,16 @@ const skillIconMap: Record<string, AnyIcon> = {
   HTML5: SiHtml5,
   CSS3: Palette,
   GSAP: SiGreensock,
+  Recharts: BarChart3,
   // Backend
   "Node.js": SiNodedotjs,
   "Express.js": SiExpress,
   Flask: SiFlask,
   "Spring Boot": SiSpringboot,
   "REST APIs": Network,
+  "JWT Auth": Lock,
+  Redis: SiRedis,
+  "Sequelize ORM": Database,
   // Databases
   PostgreSQL: SiPostgresql,
   MySQL: SiMysql,
@@ -195,6 +202,7 @@ const skillIconMap: Record<string, AnyIcon> = {
   GitHub: SiGithub,
   Netlify: SiNetlify,
   Render: SiRender,
+  "Hugging Face": SiHuggingface,
   Swagger: SiSwagger,
   cPanel: SiCpanel,
   // BI & ETL
@@ -205,14 +213,20 @@ const skillIconMap: Record<string, AnyIcon> = {
   // AI & Integration
   "Claude API": SiAnthropic,
   "Anthropic MCP": SiAnthropic,
-  "LLM Integration": Zap,
+  "Prompt Engineering": Brain,
+  "Sarvam AI": Sparkles,
+  Ollama: Brain,
+  Groq: Zap,
   DistilBERT: Brain,
+  "Sentence Transformers": Brain,
+  RAG: Layers,
   // Practices
   Agile: CheckSquare,
   "Version Control": SiGit,
   "Responsive UI": Smartphone,
   "Lazy Loading": Zap,
   "State Management": Layers,
+  "Claude Code Certified": Sparkles,
 };
 
 // Category header icons (Lucide only)

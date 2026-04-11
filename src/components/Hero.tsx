@@ -18,7 +18,7 @@ export const Hero = () => {
 
         {/* Subheadline */}
         <p className="font-display text-3xl md:text-4xl text-black max-w-3xl mx-auto mb-6 leading-tight font-bold">
-          Full Stack Developer • Data Analyst • AI Systems Engineer
+          Full Stack Developer • AI Systems Engineer
         </p>
 
         {/* Bio */}

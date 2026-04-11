@@ -13,7 +13,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "Ingodown AI (WMS)",
+    title: "INGODAM AI (WMS)",
     description:
       "Live data-to-AI injection pipeline fetching real-time warehouse metrics from PostgreSQL into LLMs, eliminating hallucinations.",
     image: "/assets/projects/wms-ai.png",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
   },
   {
     id: "2",
-    title: "Full Stack Applciation",
+    title: "EAMCET Student Tracking System",
     description:
       "Extracted raw exam datasets into a structured MySQL database with a Node.js API calculating live KPIs.",
     image: "/assets/projects/eamcet.png",

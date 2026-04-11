@@ -68,7 +68,7 @@ export const projects: Project[] = [
     id: "4",
     title: "New Music Palace (NMP Store)",
     description:
-      "100-SKU B2B/B2C e-commerce storefront inventory pipeline. Achieved 90+ Lighthouse scores.",
+      "B2B/B2C e-commerce application for inventory management. Achieved 90+ Lighthouse scores.",
     image: "/assets/projects/nmp-store.png",
     stack: ["Angular 21", "Node.js", "PostgreSQL", "Tailwind CSS"],
     liveLink: "https://nmpstore.netlify.app",

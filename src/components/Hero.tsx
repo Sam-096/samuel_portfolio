@@ -43,12 +43,6 @@ export const Hero = () => {
               PROJECTS
             </p>
           </div>
-          {/* <div>
-            <p className="text-4xl md:text-5xl font-black text-black">7</p>
-            <p className="text-sm md:text-base text-black mt-2 font-bold">
-              Happy Client
-            </p>
-          </div> */}
         </div>
 
         {/* CTA Buttons */}

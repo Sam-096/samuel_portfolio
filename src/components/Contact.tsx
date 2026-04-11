@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 export const Contact = () => {
   const currentYear = new Date().getFullYear();
@@ -63,13 +63,24 @@ export const Contact = () => {
             <h4 className="text-lg font-black text-black mb-6 uppercase tracking-widest border-b-2 border-black pb-3">
               Get In Touch
             </h4>
-            <a
-              href="mailto:kottala.samuel@gmail.com"
-              className="inline-flex items-center gap-3 px-6 py-3 bg-black text-[#e4ff00] font-black border-2 border-black hover:bg-[#e4ff00] hover:text-black transition-all text-sm uppercase transform hover:scale-105"
-            >
-              <Mail className="w-5 h-5" />
-              EMAIL
-            </a>
+            <div className="flex flex-col gap-3">
+              <a
+                href="mailto:kottala.samuel@gmail.com"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-black text-[#e4ff00] font-black border-2 border-black hover:bg-[#e4ff00] hover:text-black transition-all text-sm uppercase"
+              >
+                <Mail className="w-4 h-4" />
+                EMAIL
+              </a>
+              <a
+                href="https://wa.me/919876543210"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-black text-[#e4ff00] font-black border-2 border-black hover:bg-[#e4ff00] hover:text-black transition-all text-sm uppercase"
+              >
+                <Phone className="w-4 h-4" />
+                WHATSAPP
+              </a>
+            </div>
             <p className="text-black text-sm mt-4 font-black">
               Open to opportunities
             </p>

@@ -59,7 +59,7 @@ export const Projects = () => {
             return (
               <div
                 key={project.id}
-                className={`project-card group border-2 border-black p-6 md:p-8 flex flex-col h-full bg-white hover:bg-[#e4ff00] transition-colors duration-200 ${
+                className={`project-card group border-2 border-black p-6 md:p-8 flex flex-col h-full bg-white card-dotted hover:bg-[#e4ff00] transition-colors duration-200 ${
                   idx % 2 === 0 ? "md:border-r-0" : ""
                 } ${idx < 3 ? "md:border-b-0 lg:border-b-2" : ""}`}
               >

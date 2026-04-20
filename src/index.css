@@ -57,24 +57,26 @@ button, input, div, section, article, nav, footer, a, span {
   background-color: #e4ff00;
 }
 
-/* Grid/dot matrix background pattern */
-.grid-pattern {
-  background-image:
-    linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent),
-    linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent);
-  background-size: 40px 40px;
+/*
+ * Blacksmith.sh dot system — one unified pattern.
+ * Rules observed from blacksmith.sh:
+ *   1. Yellow surfaces stay SOLID (no dots).
+ *   2. Dots only on white card surfaces — subtle grey, never loud.
+ *   3. Dot size = 1px. Spacing = 24px. Color = black @ 7% opacity.
+ * Legacy class names are aliased to the same rule for consistency.
+ */
+.card-dotted,
+.dots-on-light {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-/* Small dotted grid pattern */
-.dotted-grid-small {
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
-  background-size: 12px 12px;
-}
-
-/* Dotted grid on cards */
-.card-dotted {
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-  background-size: 16px 16px;
+/* Dots on yellow/dark surfaces are intentionally disabled to match Blacksmith. */
+.grid-pattern,
+.dotted-grid-small,
+.dots-on-yellow,
+.dots-on-dark {
+  background-image: none;
 }
 
 /* Animations */

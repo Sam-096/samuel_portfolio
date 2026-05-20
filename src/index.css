@@ -71,12 +71,25 @@ button, input, div, section, article, nav, footer, a, span {
   background-size: 24px 24px;
 }
 
-/* Dots on yellow/dark surfaces are intentionally disabled to match Blacksmith. */
-.grid-pattern,
+/* Square grid lines for yellow surfaces (Hero). */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Legacy aliases — keep dotted style for any consumers other than Hero. */
 .dotted-grid-small,
-.dots-on-yellow,
+.dots-on-yellow {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.18) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Yellow dots on black surfaces (footer/CTA). */
 .dots-on-dark {
-  background-image: none;
+  background-image: radial-gradient(circle, rgba(228, 255, 0, 0.22) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 /* Animations */

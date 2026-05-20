@@ -60,7 +60,7 @@ export const projects: Project[] = [
     highlights: [
       "Built responsive, data-driven financial dashboards exposing invoice flows and GSTR/ITR compliance status",
       "Optimized web performance using React memoization, lazy loading, and code splitting",
-      "Implemented complex SQL-backed views for immutable audit logs and multi-role accounting workflows",
+      "Implemented SQL-backed views for immutable audit logs and multi-role accounting workflows",
     ],
     status: "Completed",
   },

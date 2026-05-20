@@ -23,10 +23,10 @@ export const Hero = () => {
 
         {/* Bio */}
         <p className="font-body text-lg md:text-xl text-black max-w-3xl mx-auto mb-12 leading-relaxed">
-          Results-driven Developer (3 YOE) delivering SaaS platforms via React,
-          Angular & Node.js. Bridges software engineering with data analytics
-          (SQL/BI) and AI automation to build intelligent, workflow-driven
-          enterprise dashboards.
+          3 years of experience across accounting, warehouse operations,
+          education, and e-commerce — using React, Angular, Node.js, Databases,
+          and AI integrations, RAG, to ship production-grade systems with
+          measurable business impact.
         </p>
 
         {/* Stats Grid */}

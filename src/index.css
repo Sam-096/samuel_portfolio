@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
 html {
@@ -9,7 +9,7 @@ html {
 body {
   background-color: #ffffff;
   color: #000000;
-  font-family: 'IBM Plex Sans', 'Droid Sans', system-ui, sans-serif;
+  font-family: "IBM Plex Sans", "Droid Sans", system-ui, sans-serif;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -22,7 +22,15 @@ body {
 }
 
 /* Remove all rounded corners */
-button, input, div, section, article, nav, footer, a, span {
+button,
+input,
+div,
+section,
+article,
+nav,
+footer,
+a,
+span {
   border-radius: 0 !important;
 }
 
@@ -67,7 +75,11 @@ button, input, div, section, article, nav, footer, a, span {
  */
 .card-dotted,
 .dots-on-light {
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.07) 1px,
+    transparent 1px
+  );
   background-size: 24px 24px;
 }
 
@@ -76,26 +88,38 @@ button, input, div, section, article, nav, footer, a, span {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
-  background-size: 48px 48px;
+  background-size: 56px 56px;
 }
 
 /* Legacy aliases — keep dotted style for any consumers other than Hero. */
 .dotted-grid-small,
 .dots-on-yellow {
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.18) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.18) 1px,
+    transparent 1px
+  );
   background-size: 24px 24px;
 }
 
 /* Yellow dots on black surfaces (footer/CTA). */
 .dots-on-dark {
-  background-image: radial-gradient(circle, rgba(228, 255, 0, 0.22) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle,
+    rgba(228, 255, 0, 0.22) 1px,
+    transparent 1px
+  );
   background-size: 24px 24px;
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {

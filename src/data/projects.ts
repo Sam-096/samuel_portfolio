@@ -26,15 +26,15 @@ export const projects: Project[] = [
     liveLink: "https://wmsai.netlify.app",
     githubLink: "https://github.com/Sam-096/wms-bot-backend",
     highlights: [
-      "Real-time PostgreSQL data injection",
-      "LLM-powered warehouse analytics",
+      "Real-time RAG - PostgreSQL data injection",
+      "LLM-powered warehouse analytics in Muilti Lingual Chatbot",
       "Reduced hallucination by 95%",
     ],
     status: "Ongoing",
   },
   {
     id: "2",
-    title: "EAMCET Student Tracking System",
+    title: "Admission System",
     description:
       "Extracted raw exam datasets into a structured MySQL database with a Node.js API calculating live KPIs.",
     image: "/assets/projects/eamcet.png",
